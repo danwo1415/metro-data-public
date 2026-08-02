@@ -2,6 +2,7 @@ package com.example.metroroute;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.JavascriptInterface;
@@ -48,8 +49,12 @@ public class MainActivity extends Activity {
             "https://www.mtr.com.hk/ch/corporate/news/corporate.php";
     private static final String HKO_WEATHER_URL =
             "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en";
+    private static final String HKO_UV_15MIN_URL =
+            "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_15min_uvindex.csv";
     private static final String EPD_PM25_URL =
             "https://www.aqhi.gov.hk/epd/ddata/html/out/24pc_Eng.xml";
+    private static final String PUBLISHED_ENV_URL =
+            "https://raw.githubusercontent.com/danwo1415/metro-data-public/main/hk-environment.json";
     private static final String EPD_AQHI_PAGE_URL =
             "https://www.aqhi.gov.hk/en/";
     private static final String DATA_GOV_FILTER_URL =
@@ -73,10 +78,12 @@ public class MainActivity extends Activity {
     private volatile Map<String, String> regularFareMap;
     private volatile Map<String, String> airportFareMap;
     private WebView webView;
+    private SharedPreferences environmentCache;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        environmentCache = getSharedPreferences("environment_cache", MODE_PRIVATE);
         webView = new WebView(this);
         setContentView(webView);
 
@@ -163,11 +170,40 @@ public class MainActivity extends Activity {
         JSONObject result = new JSONObject();
         result.put("temperature", findWeatherValue(root.optJSONObject("temperature"), "Hong Kong Observatory"));
         result.put("humidity", findWeatherValue(root.optJSONObject("humidity"), "Hong Kong Observatory"));
-        result.put("uv", readUvValue(root.opt("uvindex")));
 
-        String pm25 = readPm25WithFallbacks();
+        String uv;
+        try {
+            uv = readLatest15MinuteUv();
+            if (!"--".equals(uv) && environmentCache != null) {
+                environmentCache.edit().putString("uv15", uv).apply();
+            }
+        } catch (Exception ignored) {
+            uv = environmentCache == null ? "--"
+                    : cleanNumber(environmentCache.getString("uv15", "--"));
+        }
+        result.put("uv", uv);
+
+        String pm25 = readPublishedPm25();
+        if ("--".equals(pm25)) pm25 = readPm25WithFallbacks();
+        if ("--".equals(pm25) && environmentCache != null) {
+            pm25 = cleanNumber(environmentCache.getString("pm25", "--"));
+        }
+        if (!"--".equals(pm25) && environmentCache != null) {
+            environmentCache.edit().putString("pm25", pm25).apply();
+        }
         result.put("pm25", pm25);
         return result;
+    }
+
+    private String readPublishedPm25() {
+        try {
+            JSONObject payload = new JSONObject(httpGet(PUBLISHED_ENV_URL, true));
+            String value = cleanNumber(payload.opt("pm25"));
+            if (!"--".equals(value)) return value;
+        } catch (Exception ignored) {
+            // The public repository may not have produced its first hourly file yet.
+        }
+        return "--";
     }
 
     private String findWeatherValue(JSONObject group, String preferredPlace) {
@@ -185,22 +221,21 @@ public class MainActivity extends Activity {
         return fallback;
     }
 
-    private String readUvValue(Object uvObject) {
-        if (uvObject instanceof JSONObject) {
-            JSONObject uv = (JSONObject) uvObject;
-            JSONArray data = uv.optJSONArray("data");
-            if (data != null) {
-                for (int i = data.length() - 1; i >= 0; i--) {
-                    JSONObject item = data.optJSONObject(i);
-                    if (item == null) continue;
-                    String value = cleanNumber(item.opt("value"));
-                    if (!"--".equals(value)) return value;
-                }
-            }
-            String direct = cleanNumber(uv.opt("value"));
-            if (!"--".equals(direct)) return direct;
+    private String readLatest15MinuteUv() throws IOException {
+        String csv = httpGet(HKO_UV_15MIN_URL, true).replace("\uFEFF", "").trim();
+        if (csv.isEmpty()) return "--";
+
+        String[] lines = csv.split("\r?\n");
+        for (int i = lines.length - 1; i >= 1; i--) {
+            String line = lines[i].trim();
+            if (line.isEmpty()) continue;
+            List<String> fields = parseCsvLine(line);
+            if (fields.size() < 2) continue;
+            String timestamp = fields.get(0).replaceAll("[^0-9]", "");
+            if (timestamp.length() != 12) continue;
+            return cleanNumber(fields.get(1));
         }
-        return cleanNumber(uvObject);
+        return "--";
     }
 
     private String readPm25WithFallbacks() {
@@ -580,7 +615,7 @@ public class MainActivity extends Activity {
         connection.setRequestProperty("User-Agent", browserHeaders
                 ? "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 "
                 + "(KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36"
-                : "MetroRoutePlanner/2.4.12");
+                : "MetroRoutePlanner/2.4.14");
         connection.setRequestProperty("Accept",
                 "application/json,application/xml,text/xml,text/html,text/csv,text/plain,*/*");
         connection.setRequestProperty("Accept-Language", "en-HK,en;q=0.9,zh-HK;q=0.8");

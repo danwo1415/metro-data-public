@@ -27,6 +27,14 @@ jobs:
         run: python -m pip install --disable-pip-version-check requests
       - name: Fetch official Shenzhen data
         run: python -u update_shenzhen_environment.py
+      - name: Upload diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shenzhen-environment-report
+          path: shenzhen-environment-report.json
+          if-no-files-found: ignore
+          retention-days: 7
       - name: Commit changed data
         run: |
           if git diff --quiet -- shenzhen-environment.json shenzhen-environment-report.json; then

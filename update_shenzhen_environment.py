@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "shenzhen-environment.json"
 REPORT = ROOT / "shenzhen-environment-report.json"
 
-API_BASE = "https://opendata.sz.gov.cn/api/{dataset}/1/service.json"
+API_BASE = "https://opendata.sz.gov.cn/api/{dataset}/1/service.xhtml"
 WEATHER_DATASET = "29200_00903509"  # Shenzhen automatic-station observations
 PM25_DATASET = "29200_00900269"    # Shenzhen PM2.5 real-time query
 UV_URL = "https://weather.sz.gov.cn/qixiangfuwu/zhuanxiangfuwu/jiankangqixiangfuwu/index.html"
@@ -73,16 +73,35 @@ def fetch_dataset(dataset: str, app_key: str) -> Any:
         timeout=45,
     )
     response.raise_for_status()
-    payload = response.json()
-    # Common Shenzhen Open Data error shapes.
-    text = json.dumps(payload, ensure_ascii=False)[:1000]
-    if any(token in text.lower() for token in ("invalid appkey", "appkey错误", "appkey无效", "无访问权限")):
-        raise RuntimeError("Shenzhen Open Data rejected SZ_OPEN_DATA_APP_KEY")
-    return payload
+    try:
+        payload = response.json()
+    except Exception as exc:
+        raise RuntimeError(
+            f"Shenzhen Open Data returned non-JSON content from {response.url}: "
+            f"{response.text[:200]!r}"
+        ) from exc
+    # Common Shenzhen Open Data error shapes. Never print the appKey.
+    text = json.dumps(payload, ensure_ascii=False)[:2000]
+    lowered = text.lower()
+    if any(token in lowered for token in (
+        "invalid appkey", "appkey错误", "appkey无效", "无访问权限",
+        "未订阅", "尚未订阅", "未授权", "请先订阅", "没有权限"
+    )):
+        raise RuntimeError(
+            f"Shenzhen Open Data rejected access to dataset {dataset}; "
+            "confirm the appKey and subscribe this API in the platform"
+        )
+    if isinstance(payload, dict) and isinstance(payload.get("data"), list):
+        return payload
+    summary = list(payload.keys())[:20] if isinstance(payload, dict) else type(payload).__name__
+    raise RuntimeError(
+        f"Unexpected Shenzhen Open Data response for dataset {dataset}; "
+        f"top-level structure={summary}"
+    )
 
 
 STATION_KEYS = {"station", "stationname", "站名", "站点名称", "监测站点", "自动站名称", "测站名称"}
-TIME_KEYS = {"time", "datetime", "datatime", "obstime", "updatetime", "发布时间", "监测时间", "观测时间", "数据时间"}
+TIME_KEYS = {"time", "datetime", "datatime", "obstime", "updatetime", "crttime", "ddatetime", "forecasttime", "发布时间", "更新时间", "监测时间", "观测时间", "数据时间"}
 
 
 def metric_candidates(payload: Any, aliases: set[str], low: float, high: float) -> list[dict[str, Any]]:
@@ -93,7 +112,9 @@ def metric_candidates(payload: Any, aliases: set[str], low: float, high: float) 
         observed = first_text(record, TIME_KEYS)
         for key, raw in record.items():
             nk = norm_key(str(key))
-            if nk not in aliases and not any(alias and alias in nk for alias in aliases):
+            # One-letter official field names such as T must match exactly;
+            # longer aliases may match descriptive field names.
+            if not any(nk == alias or (len(alias) >= 3 and alias in nk) for alias in aliases):
                 continue
             value = number(raw)
             if value is None or not low <= value <= high:
@@ -170,8 +191,8 @@ def main() -> int:
 
     print("[1/4] Fetching Shenzhen official weather observations...", flush=True)
     weather = fetch_dataset(WEATHER_DATASET, app_key)
-    temp_candidates = metric_candidates(weather, {"temperature", "airtemperature", "temp", "气温", "温度"}, -30, 60)
-    humidity_candidates = metric_candidates(weather, {"relativehumidity", "humidity", "rh", "相对湿度", "湿度"}, 0, 100)
+    temp_candidates = metric_candidates(weather, {"T", "temperature", "airtemperature", "temp", "气温", "温度"}, -30, 60)
+    humidity_candidates = metric_candidates(weather, {"RHSFC", "relativehumidity", "humidity", "rh", "相对湿度", "湿度"}, 0, 100)
     preferred_weather = ("深圳国家基本气象站", "福田国家基本气象站", "竹子林", "福田")
     temperature = choose(temp_candidates, preferred_weather)
     humidity = choose(humidity_candidates, preferred_weather)

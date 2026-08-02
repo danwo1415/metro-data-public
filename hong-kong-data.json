@@ -1,6 +1,6 @@
 {
-  "version": "2.2.0-hk-data-1",
-  "updatedAt": "2026-08-01",
+  "version": "2.4.1-hk-data-2",
+  "updatedAt": "2026-08-02",
   "L": {
     "AEL": {
       "name": "機場快綫",
@@ -764,5 +764,1992 @@
     "利東": "lidong",
     "海怡半島": "haiyibandao",
     "迪士尼": "dishini"
+  },
+  "serviceHours": {
+    "SKM": {
+      "KTL": {
+        "WHA": {
+          "first": "06:06",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:19",
+          "last": "00:49",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:19",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TST": {
+      "TWL": {
+        "CEN": {
+          "first": "06:04",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:11",
+          "last": "00:59",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "ADM": {
+      "SIL": {
+        "SOH": {
+          "first": "06:11",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        }
+      },
+      "TWL": {
+        "CEN": {
+          "first": "06:08",
+          "last": "00:57",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:07",
+          "last": "00:56",
+          "source": "MTR official service hours"
+        }
+      },
+      "ISL": {
+        "KET": {
+          "first": "06:05",
+          "last": "01:02",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:10",
+          "last": "01:00",
+          "source": "MTR official service hours"
+        }
+      },
+      "EAL": {
+        "LMC": {
+          "first": "06:10",
+          "last": "21:29",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "06:04",
+          "last": "23:01",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "06:04",
+          "last": "00:22",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "YMT": {
+      "TWL": {
+        "CEN": {
+          "first": "06:01",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:14",
+          "last": "01:03",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "06:11",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:14",
+          "last": "00:44",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:14",
+          "last": "01:04",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "MOK": {
+      "TWL": {
+        "CEN": {
+          "first": "06:10",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:16",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "06:10",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:16",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:16",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "JOR": {
+      "TWL": {
+        "CEN": {
+          "first": "06:03",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:13",
+          "last": "01:01",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KOT": {
+      "KTL": {
+        "WHA": {
+          "first": "06:04",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:21",
+          "last": "00:51",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:21",
+          "last": "01:11",
+          "source": "MTR official service hours"
+        }
+      },
+      "EAL": {
+        "LMC": {
+          "first": "05:30",
+          "last": "21:41",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:36",
+          "last": "23:13",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:30",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:45",
+          "last": "00:36",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:45",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CEN": {
+      "TWL": {
+        "TSW": {
+          "first": "06:06",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        }
+      },
+      "ISL": {
+        "KET": {
+          "first": "06:07",
+          "last": "01:04",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:07",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LOF": {
+      "KTL": {
+        "WHA": {
+          "first": "06:02",
+          "last": "00:41",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:23",
+          "last": "00:53",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:23",
+          "last": "01:13",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CHH": {
+      "KTL": {
+        "WHA": {
+          "first": "05:57",
+          "last": "00:35",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:15",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:15",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "WTS": {
+      "KTL": {
+        "WHA": {
+          "first": "06:00",
+          "last": "00:39",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:24",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:24",
+          "last": "01:14",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "DIH": {
+      "TML": {
+        "WKS": {
+          "first": "06:14",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:05",
+          "last": "00:21",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:05",
+          "last": "00:41",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "05:59",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:26",
+          "last": "00:56",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:26",
+          "last": "01:16",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KOB": {
+      "KTL": {
+        "WHA": {
+          "first": "06:03",
+          "last": "00:33",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:03",
+          "last": "01:17",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:16",
+          "last": "01:00",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:16",
+          "last": "01:20",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "PRE": {
+      "TWL": {
+        "CEN": {
+          "first": "06:08",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:17",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "06:08",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:18",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:18",
+          "last": "01:07",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KWT": {
+      "KTL": {
+        "WHA": {
+          "first": "06:00",
+          "last": "00:30",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:04",
+          "last": "01:04",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:00",
+          "last": "01:13",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "NTK": {
+      "KTL": {
+        "WHA": {
+          "first": "06:01",
+          "last": "00:31",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:01",
+          "last": "01:15",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:02",
+          "last": "01:02",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:02",
+          "last": "01:22",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SSP": {
+      "TWL": {
+        "CEN": {
+          "first": "06:14",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:20",
+          "last": "01:08",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "MEF": {
+      "TWL": {
+        "CEN": {
+          "first": "06:10",
+          "last": "00:40",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:25",
+          "last": "01:13",
+          "source": "MTR official service hours"
+        }
+      },
+      "TML": {
+        "WKS": {
+          "first": "06:12",
+          "last": "00:36",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:04",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:12",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KWH": {
+      "TWL": {
+        "CEN": {
+          "first": "06:04",
+          "last": "00:33",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:32",
+          "last": "01:20",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LAK": {
+      "TCL": {
+        "HOK": {
+          "first": "06:02",
+          "last": "01:01",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:13",
+          "last": "01:01",
+          "source": "MTR official service hours"
+        }
+      },
+      "TWL": {
+        "CEN": {
+          "first": "06:07",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:28",
+          "last": "01:16",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LCK": {
+      "TWL": {
+        "CEN": {
+          "first": "06:11",
+          "last": "00:41",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:24",
+          "last": "01:11",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CSW": {
+      "TWL": {
+        "CEN": {
+          "first": "06:13",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:22",
+          "last": "01:10",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KWF": {
+      "TWL": {
+        "CEN": {
+          "first": "06:05",
+          "last": "00:35",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:30",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SHW": {
+      "ISL": {
+        "KET": {
+          "first": "06:09",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:05",
+          "last": "00:56",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TSW": {
+      "TWL": {
+        "CEN": {
+          "first": "06:00",
+          "last": "00:30",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "FOH": {
+      "ISL": {
+        "KET": {
+          "first": "06:08",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:16",
+          "last": "01:07",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "WAC": {
+      "ISL": {
+        "KET": {
+          "first": "06:03",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:11",
+          "last": "01:01",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TWH": {
+      "TWL": {
+        "CEN": {
+          "first": "06:01",
+          "last": "00:31",
+          "source": "MTR official service hours"
+        },
+        "TSW": {
+          "first": "06:34",
+          "last": "01:22",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CAB": {
+      "ISL": {
+        "KET": {
+          "first": "06:01",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:13",
+          "last": "01:04",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TIH": {
+      "ISL": {
+        "KET": {
+          "first": "06:09",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:15",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "QUB": {
+      "ISL": {
+        "KET": {
+          "first": "06:04",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:21",
+          "last": "01:11",
+          "source": "MTR official service hours"
+        }
+      },
+      "TKL": {
+        "NOP": {
+          "first": "06:13",
+          "last": "01:03",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "06:15",
+          "last": "01:14",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:15",
+          "last": "01:14",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TAK": {
+      "ISL": {
+        "KET": {
+          "first": "06:03",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:22",
+          "last": "01:13",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SKW": {
+      "ISL": {
+        "KET": {
+          "first": "05:59",
+          "last": "00:40",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:25",
+          "last": "01:17",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SWH": {
+      "ISL": {
+        "KET": {
+          "first": "06:01",
+          "last": "00:41",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:23",
+          "last": "01:15",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LAT": {
+      "KTL": {
+        "WHA": {
+          "first": "06:12",
+          "last": "00:28",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:12",
+          "last": "01:11",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:05",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:12",
+          "last": "01:20",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CHW": {
+      "ISL": {
+        "KET": {
+          "first": "05:55",
+          "last": "00:35",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HFC": {
+      "ISL": {
+        "KET": {
+          "first": "05:58",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:29",
+          "last": "01:19",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "NOP": {
+      "TKL": {
+        "POA": {
+          "first": "06:13",
+          "last": "01:12",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:13",
+          "last": "01:12",
+          "source": "MTR official service hours"
+        }
+      },
+      "ISL": {
+        "KET": {
+          "first": "06:06",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:19",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HOK": {
+      "TCL": {
+        "TUC": {
+          "first": "06:01",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KOW": {
+      "TCL": {
+        "HOK": {
+          "first": "06:10",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:04",
+          "last": "00:53",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TUC": {
+      "TCL": {
+        "HOK": {
+          "first": "06:02",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TSY": {
+      "TCL": {
+        "HOK": {
+          "first": "05:59",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:15",
+          "last": "01:04",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "OLY": {
+      "TCL": {
+        "HOK": {
+          "first": "06:08",
+          "last": "01:07",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:07",
+          "last": "00:55",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "YAT": {
+      "TKL": {
+        "NOP": {
+          "first": "06:09",
+          "last": "00:59",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "06:19",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:19",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "06:09",
+          "last": "00:26",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:09",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:07",
+          "last": "01:08",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:09",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TKO": {
+      "TKL": {
+        "NOP": {
+          "first": "06:04",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "06:17",
+          "last": "01:23",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:20",
+          "last": "01:26",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HAH": {
+      "TKL": {
+        "NOP": {
+          "first": "06:02",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "06:19",
+          "last": "01:25",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:02",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "POA": {
+      "TKL": {
+        "NOP": {
+          "first": "06:00",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:00",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TIK": {
+      "KTL": {
+        "WHA": {
+          "first": "06:07",
+          "last": "00:22",
+          "source": "MTR official service hours"
+        },
+        "CHH": {
+          "first": "06:07",
+          "last": "01:06",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:07",
+          "last": "01:15",
+          "source": "MTR official service hours"
+        }
+      },
+      "TKL": {
+        "NOP": {
+          "first": "06:06",
+          "last": "00:56",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "06:15",
+          "last": "01:21",
+          "source": "MTR official service hours"
+        },
+        "LHP": {
+          "first": "06:18",
+          "last": "01:24",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "DIS": {
+      "DRL": {
+        "SUN": {
+          "first": "06:20",
+          "last": "00:40",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SUN": {
+      "DRL": {
+        "DIS": {
+          "first": "06:15",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        }
+      },
+      "TCL": {
+        "HOK": {
+          "first": "06:09",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:22",
+          "last": "01:10",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LHP": {
+      "TKL": {
+        "NOP": {
+          "first": "05:57",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        },
+        "POA": {
+          "first": "05:57",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "NAC": {
+      "TCL": {
+        "HOK": {
+          "first": "06:06",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        },
+        "TUC": {
+          "first": "06:09",
+          "last": "00:57",
+          "source": "MTR official service hours"
+        }
+      },
+      "TML": {
+        "WKS": {
+          "first": "06:15",
+          "last": "00:39",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:01",
+          "last": "00:40",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:15",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "MKK": {
+      "EAL": {
+        "LMC": {
+          "first": "05:28",
+          "last": "21:38",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:33",
+          "last": "23:10",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:28",
+          "last": "00:33",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:49",
+          "last": "00:39",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:49",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TAW": {
+      "TML": {
+        "WKS": {
+          "first": "05:40",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:58",
+          "last": "00:14",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:58",
+          "last": "00:34",
+          "source": "MTR official service hours"
+        }
+      },
+      "EAL": {
+        "LMC": {
+          "first": "05:35",
+          "last": "21:45",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:40",
+          "last": "23:17",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:35",
+          "last": "00:41",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:40",
+          "last": "00:31",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:40",
+          "last": "01:01",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SHT": {
+      "EAL": {
+        "LMC": {
+          "first": "05:37",
+          "last": "21:48",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:35",
+          "last": "23:20",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:35",
+          "last": "00:44",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:38",
+          "last": "00:28",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:38",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HUH": {
+      "TML": {
+        "WKS": {
+          "first": "06:04",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:53",
+          "last": "00:32",
+          "source": "MTR official service hours"
+        }
+      },
+      "EAL": {
+        "LMC": {
+          "first": "05:35",
+          "last": "21:35",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:30",
+          "last": "23:07",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:30",
+          "last": "00:28",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:55",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "FOT": {
+      "EAL": {
+        "LMC": {
+          "first": "05:40",
+          "last": "21:51",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:37",
+          "last": "23:23",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:37",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "06:01",
+          "last": "00:25",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:01",
+          "last": "00:55",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "UNI": {
+      "EAL": {
+        "LMC": {
+          "first": "05:44",
+          "last": "21:55",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:41",
+          "last": "23:27",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:41",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:57",
+          "last": "00:22",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:57",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "FAN": {
+      "EAL": {
+        "LMC": {
+          "first": "05:58",
+          "last": "22:08",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:54",
+          "last": "23:41",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:54",
+          "last": "01:05",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:42",
+          "last": "00:07",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:42",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TAP": {
+      "EAL": {
+        "LMC": {
+          "first": "05:50",
+          "last": "22:01",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:47",
+          "last": "23:33",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:47",
+          "last": "00:57",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:51",
+          "last": "00:16",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:51",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TWO": {
+      "EAL": {
+        "LMC": {
+          "first": "05:52",
+          "last": "22:03",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:49",
+          "last": "23:35",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "05:49",
+          "last": "00:59",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:49",
+          "last": "00:13",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:49",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LOW": {
+      "EAL": {
+        "LMC": {
+          "first": "05:55",
+          "last": "22:02",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:55",
+          "last": "00:00",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:55",
+          "last": "00:30",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LMC": {
+      "EAL": {
+        "LOW": {
+          "first": "06:38",
+          "last": "22:55",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "06:38",
+          "last": "22:55",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:38",
+          "last": "22:55",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SHS": {
+      "EAL": {
+        "LMC": {
+          "first": "06:00",
+          "last": "22:11",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "05:57",
+          "last": "23:43",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:40",
+          "last": "00:04",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:40",
+          "last": "00:34",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "ETS": {
+      "TML": {
+        "WKS": {
+          "first": "06:01",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:55",
+          "last": "00:34",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:01",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HOM": {
+      "TML": {
+        "WKS": {
+          "first": "06:06",
+          "last": "00:49",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:14",
+          "last": "00:30",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:14",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      },
+      "KTL": {
+        "WHA": {
+          "first": "06:14",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        },
+        "TIK": {
+          "first": "06:12",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:12",
+          "last": "01:02",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SYP": {
+      "ISL": {
+        "KET": {
+          "first": "06:11",
+          "last": "01:08",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:03",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HKU": {
+      "ISL": {
+        "KET": {
+          "first": "06:13",
+          "last": "01:10",
+          "source": "MTR official service hours"
+        },
+        "CHW": {
+          "first": "06:01",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KET": {
+      "ISL": {
+        "CHW": {
+          "first": "06:00",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "OCP": {
+      "SIL": {
+        "SOH": {
+          "first": "06:16",
+          "last": "01:10",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "06:06",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "WHA": {
+      "KTL": {
+        "TIK": {
+          "first": "06:10",
+          "last": "00:40",
+          "source": "MTR official service hours"
+        },
+        "KWT": {
+          "first": "06:10",
+          "last": "01:00",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "WCH": {
+      "SIL": {
+        "SOH": {
+          "first": "06:17",
+          "last": "01:12",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "06:04",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LET": {
+      "SIL": {
+        "SOH": {
+          "first": "06:20",
+          "last": "01:14",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "06:02",
+          "last": "00:44",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SOH": {
+      "SIL": {
+        "ADM": {
+          "first": "06:00",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SUW": {
+      "TML": {
+        "WKS": {
+          "first": "06:10",
+          "last": "00:53",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:10",
+          "last": "00:25",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:10",
+          "last": "00:45",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HIK": {
+      "TML": {
+        "WKS": {
+          "first": "06:18",
+          "last": "01:02",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:00",
+          "last": "00:16",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:00",
+          "last": "00:36",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KAT": {
+      "TML": {
+        "WKS": {
+          "first": "06:12",
+          "last": "00:55",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:08",
+          "last": "00:23",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:08",
+          "last": "00:43",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CKT": {
+      "TML": {
+        "WKS": {
+          "first": "05:42",
+          "last": "01:07",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:56",
+          "last": "00:12",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:56",
+          "last": "00:32",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:56",
+          "last": "00:57",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TKW": {
+      "TML": {
+        "WKS": {
+          "first": "06:08",
+          "last": "00:51",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:12",
+          "last": "00:27",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:12",
+          "last": "00:47",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "STW": {
+      "TML": {
+        "WKS": {
+          "first": "05:44",
+          "last": "01:09",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:53",
+          "last": "00:09",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:53",
+          "last": "00:29",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:53",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "CIO": {
+      "TML": {
+        "WKS": {
+          "first": "05:46",
+          "last": "01:12",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:51",
+          "last": "00:07",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:51",
+          "last": "00:27",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:51",
+          "last": "00:52",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "HEO": {
+      "TML": {
+        "WKS": {
+          "first": "05:54",
+          "last": "01:20",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:43",
+          "last": "23:59",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:43",
+          "last": "00:19",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:43",
+          "last": "00:44",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TSH": {
+      "TML": {
+        "WKS": {
+          "first": "05:52",
+          "last": "01:18",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:45",
+          "last": "00:01",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:45",
+          "last": "00:21",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:45",
+          "last": "00:46",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "EXC": {
+      "EAL": {
+        "LMC": {
+          "first": "06:13",
+          "last": "21:31",
+          "source": "MTR official service hours"
+        },
+        "LOW": {
+          "first": "06:07",
+          "last": "23:03",
+          "source": "MTR official service hours"
+        },
+        "SHS": {
+          "first": "06:07",
+          "last": "00:24",
+          "source": "MTR official service hours"
+        },
+        "ADM": {
+          "first": "05:58",
+          "last": "00:49",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "MOS": {
+      "TML": {
+        "WKS": {
+          "first": "05:56",
+          "last": "01:22",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:41",
+          "last": "23:57",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:41",
+          "last": "00:17",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:41",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SHM": {
+      "TML": {
+        "WKS": {
+          "first": "05:48",
+          "last": "01:14",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:49",
+          "last": "00:05",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:49",
+          "last": "00:25",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:49",
+          "last": "00:50",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "AUS": {
+      "TML": {
+        "WKS": {
+          "first": "06:18",
+          "last": "00:42",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "05:58",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:18",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "WKS": {
+      "TML": {
+        "TUM": {
+          "first": "05:38",
+          "last": "23:54",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:38",
+          "last": "00:14",
+          "source": "MTR official service hours"
+        },
+        "TAW": {
+          "first": "05:38",
+          "last": "00:39",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TWW": {
+      "TML": {
+        "WKS": {
+          "first": "06:07",
+          "last": "00:31",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:09",
+          "last": "00:48",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:07",
+          "last": "00:37",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "YUL": {
+      "TML": {
+        "WKS": {
+          "first": "05:57",
+          "last": "00:21",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:07",
+          "last": "00:58",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:57",
+          "last": "00:27",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "KSR": {
+      "TML": {
+        "WKS": {
+          "first": "06:01",
+          "last": "00:25",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:03",
+          "last": "00:54",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "06:01",
+          "last": "00:31",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TIS": {
+      "TML": {
+        "WKS": {
+          "first": "05:52",
+          "last": "00:16",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:12",
+          "last": "01:03",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:52",
+          "last": "00:22",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "SIH": {
+      "TML": {
+        "WKS": {
+          "first": "05:48",
+          "last": "00:12",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:17",
+          "last": "01:07",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:48",
+          "last": "00:18",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "LOP": {
+      "TML": {
+        "WKS": {
+          "first": "05:55",
+          "last": "00:19",
+          "source": "MTR official service hours"
+        },
+        "TUM": {
+          "first": "06:09",
+          "last": "01:00",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:55",
+          "last": "00:25",
+          "source": "MTR official service hours"
+        }
+      }
+    },
+    "TUM": {
+      "TML": {
+        "WKS": {
+          "first": "05:45",
+          "last": "00:09",
+          "source": "MTR official service hours"
+        },
+        "HUH": {
+          "first": "05:45",
+          "last": "00:15",
+          "source": "MTR official service hours"
+        }
+      }
+    }
   }
 }

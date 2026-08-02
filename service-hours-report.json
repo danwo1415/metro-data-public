@@ -1,0 +1,98 @@
+{
+  "mappedStations": 101,
+  "stationsWithServiceHours": 95,
+  "records": 318,
+  "missingCodes": [],
+  "unresolved": [
+    {
+      "station": "HOK",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "05:50",
+      "last": "00:48",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "KOW",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "05:53",
+      "last": "00:52",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "TSY",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "06:00",
+      "last": "00:59",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "HOK",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "05:50",
+      "last": "00:48",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "KOW",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "05:53",
+      "last": "00:52",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "TSY",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "06:00",
+      "last": "00:59",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "AIR",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "05:54",
+      "last": "00:48",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "AIR",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "06:15",
+      "last": "01:13",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "AWE",
+      "line": "AEL",
+      "destinationId": null,
+      "destinationText": "-",
+      "first": "06:00",
+      "last": "00:45",
+      "reason": "destination not mapped"
+    },
+    {
+      "station": "RAC",
+      "line": "EAL",
+      "destinationId": 0,
+      "destinationText": "-",
+      "reason": "invalid time: '-'"
+    }
+  ],
+  "mappingErrors": [],
+  "pageErrors": []
+}

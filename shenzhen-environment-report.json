@@ -1,0 +1,46 @@
+{
+  "temperatureCandidates": 5000,
+  "humidityCandidates": 5000,
+  "pm25Candidates": 0,
+  "selected": {
+    "temperature": {
+      "value": 28.1,
+      "station": "",
+      "time": "2020-07-03 07:20:00",
+      "field": "T"
+    },
+    "humidity": {
+      "value": 86.5,
+      "station": "",
+      "time": "2020-07-03 07:20:00",
+      "field": "RHSFC"
+    },
+    "pm25": null
+  },
+  "uv": {
+    "matches": [
+      {
+        "value": 2.0,
+        "context": " <div class=\"uvRefreshDate-box\"> <h2>今日紫外线实况 <h6 class=\"aas\" id=\"uvRefreshDate\"> 实况时间：11月23日15时</h6> </h2> <div class=\"cont4\"></div> </div> <h2>紫外线指数说明</h2> <div class=\"cont5\"> <table width=\""
+      },
+      {
+        "value": 5.0,
+        "context": "> <span> <p>紫外线指数 <i class=\"hob5\">?</i></p> <b id=\"ziwaixianlevel\"></b> "
+      },
+      {
+        "value": 3.0,
+        "context": " <div class=\"contdiv biao5\"> <h3>紫外线指数</h3> <table width=\"100%\" cellspacing=\"0\" cellpa"
+      },
+      {
+        "value": 2.0,
+        "context": " <div class=\"cont4\"></div> </div> <h2>紫外线指数说明</h2> <div class=\"cont5\"> <table width=\""
+      }
+    ]
+  },
+  "sources": {
+    "weatherDataset": "29200_00903509",
+    "pm25Dataset": null,
+    "pm25Status": "No verified current official Shenzhen real-time PM2.5 dataset ID",
+    "uvUrl": "https://weather.sz.gov.cn/qixiangfuwu/zhuanxiangfuwu/jiankangqixiangfuwu/index.html"
+  }
+}

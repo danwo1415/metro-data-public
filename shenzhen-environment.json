@@ -1,10 +1,20 @@
 {
-  "temperature": null,
-  "humidity": null,
-  "uv": null,
+  "temperature": 28.1,
+  "humidity": 86.5,
+  "uv": 2,
   "pm25": null,
-  "station": null,
-  "sourceUpdatedAt": null,
-  "publishedAt": null,
-  "status": "awaiting-SZ_OPEN_DATA_APP_KEY"
+  "station": {
+    "weather": "Shenzhen",
+    "pm25": null
+  },
+  "sourceUpdatedAt": "2020-07-03 07:20:00",
+  "publishedAt": "2026-08-02T11:21:15+00:00",
+  "source": "Shenzhen Meteorological Bureau and Shenzhen Open Data Platform",
+  "sources": {
+    "weatherDataset": "29200_00903509",
+    "pm25Dataset": null,
+    "pm25Status": "No verified current official Shenzhen real-time PM2.5 dataset ID",
+    "uvUrl": "https://weather.sz.gov.cn/qixiangfuwu/zhuanxiangfuwu/jiankangqixiangfuwu/index.html"
+  },
+  "status": "partial-pm25-unavailable"
 }

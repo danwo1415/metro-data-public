@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -17,6 +18,9 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends Activity {
+    private static final String OFFICIAL_NEWS_URL =
+            "https://www.mtr.com.hk/ch/corporate/news/corporate.php";
+
     private WebView webView;
 
     @Override
@@ -33,25 +37,35 @@ public class MainActivity extends Activity {
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        settings.setJavaScriptCanOpenWindowsAutomatically(false);
+        settings.setSupportMultipleWindows(false);
+
+        // Browser opening is isolated behind this explicit bridge. Remote JSON
+        // downloads never navigate the WebView and therefore cannot open a browser.
+        webView.addJavascriptInterface(new Object() {
+            @JavascriptInterface
+            public void openOfficialNews() {
+                runOnUiThread(() -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(OFFICIAL_NEWS_URL)));
+                    } catch (Exception ignored) {
+                        // Keep the app usable even if no external browser is available.
+                    }
+                });
+            }
+        }, "AndroidApp");
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                Uri uri = request.getUrl();
-                String scheme = uri.getScheme();
-                if ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme)) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
-                    return true;
-                }
-                return false;
+                // Never allow the bundled app page to navigate away. The official
+                // news link uses AndroidApp.openOfficialNews() above instead.
+                return request.isForMainFrame();
             }
         });
         webView.setWebChromeClient(new WebChromeClient());
 
-        // Do not load the page through file:///android_asset/. A file-scheme page
-        // has an opaque origin and cannot reliably use fetch()/XHR on modern
-        // Android WebView. An HTTPS base URL gives the inline app a normal web
-        // origin while the HTML itself remains bundled in the APK.
+        // Use an HTTPS base origin so the bundled page can request GitHub JSON.
         try {
             String html = readAsset("index.html");
             webView.loadDataWithBaseURL(

@@ -53,7 +53,8 @@
       },
       {
         "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?cityName=%E6%B7%B1%E5%9C%B3%E5%B8%82",
-        "error": "HTTPSConnectionPool(host='air.cnemc.cn', port=18007): Read timed out. (read timeout=25)"
+        "status": 404,
+        "bytes": 1845
       },
       {
         "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?area=%E6%B7%B1%E5%9C%B3%E5%B8%82",

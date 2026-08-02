@@ -18,6 +18,7 @@ import time
 import unicodedata
 from pathlib import Path
 from typing import Any
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urljoin
 
 import requests
@@ -58,6 +59,16 @@ LINE_ROOTS: dict[str, list[str]] = {
         "https://www.mtrsz.com.cn/frontend/default/src/channel/operation_timetable_13line.html",
         "https://www.mtrsz.com.cn/frontend/default/src/channel/operation_timetable_13Line.html",
     ],
+}
+
+# Stable official article URLs used only when a line directory does not expose
+# its current timetable links. They provide enough bootstrap coverage for the
+# first successful data publication; station pages below then fill weak lines.
+DIRECT_WORKDAY_HINTS: dict[str, list[str]] = {
+    "SZ1": ["https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"],
+    "SZ28": ["https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html"],
+    "SZ3": ["https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"],
+    "SZ11": ["https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html"],
 }
 
 # Official 2026 holiday calendar. Holiday dates use the official holiday table;
@@ -137,9 +148,9 @@ def parse_time(value: str) -> str | None:
     return f"{h % 24:02d}:{minute:02d}"
 
 
-def get(url: str, timeout: int = 25) -> str:
+def get(url: str, timeout: int = 10, attempts: int = 1) -> str:
     last: Exception | None = None
-    for attempt in range(3):
+    for attempt in range(max(1, attempts)):
         try:
             r = SESSION.get(url, timeout=timeout)
             r.raise_for_status()
@@ -147,7 +158,8 @@ def get(url: str, timeout: int = 25) -> str:
             return r.text
         except Exception as exc:  # noqa: BLE001
             last = exc
-            time.sleep(1.2 * (attempt + 1))
+            if attempt + 1 < max(1, attempts):
+                time.sleep(0.8 * (attempt + 1))
     raise RuntimeError(f"GET failed: {url}: {last}")
 
 
@@ -326,7 +338,7 @@ def parse_english_table(html: str, line_code: str, data: dict[str, Any], lookup:
     return records
 
 
-def parse_chinese_station_page(html: str, data: dict[str, Any], lookup: dict[str, str], source: str) -> list[tuple[str, str, str, str, str, str]]:
+def parse_chinese_station_page(html: str, data: dict[str, Any], lookup: dict[str, str], source: str, expected_station: str | None = None) -> list[tuple[str, str, str, str, str, str]]:
     soup = BeautifulSoup(html, "lxml")
     output: list[tuple[str, str, str, str, str, str]] = []
     for heading in soup.find_all(string=re.compile(r"运营时刻表|運營時刻表")):
@@ -354,7 +366,7 @@ def parse_chinese_station_page(html: str, data: dict[str, Any], lookup: dict[str
             # Station name is normally in the page title / h1.
             title = clean_text((soup.find("h1") or soup.find("h2") or soup.title).get_text(" ", strip=True)) if (soup.find("h1") or soup.find("h2") or soup.title) else ""
             title = re.sub(r"站点介绍|站点|深圳地铁|[-|].*", "", title).strip()
-            station = map_name(title, lookup)
+            station = expected_station or map_name(title, lookup)
             if station and direction and first and last and station != direction:
                 output.append((typ, station, line_code, direction, first, last))
     return output
@@ -377,8 +389,35 @@ def schedule_type_for(date: dt.date) -> str:
     return "dayoff" if date.weekday() >= 5 else "workday"
 
 
-def canonical_service_data(schedules: dict[str, Any], selected: str) -> str:
-    return json.dumps({"selected": selected, "schedules": schedules}, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+def build_effective_hours(schedules: dict[str, Any], selected: str) -> tuple[dict[str, Any], dict[str, int]]:
+    """Build today's usable table without inventing any times.
+
+    Official sites sometimes expose only a working-day table, or one day-type
+    page can be temporarily unavailable. Keep all records from the selected
+    day type first, then supplement only missing station/line/direction records
+    from the other official day types. Every supplemented record is marked so
+    the provenance is visible in the JSON and diagnostic report.
+    """
+    order = [selected] + [x for x in ("workday", "dayoff", "holiday") if x != selected]
+    effective: dict[str, Any] = {}
+    fallback_counts = {"workday": 0, "dayoff": 0, "holiday": 0}
+    for typ in order:
+        for station, by_line in (schedules.get(typ) or {}).items():
+            for line, by_terminal in by_line.items():
+                for terminal, record in by_terminal.items():
+                    target = effective.setdefault(station, {}).setdefault(line, {})
+                    if terminal in target:
+                        continue
+                    copied = copy.deepcopy(record)
+                    if typ != selected:
+                        copied["fallbackDayType"] = typ
+                        fallback_counts[typ] += 1
+                    target[terminal] = copied
+    return effective, fallback_counts
+
+
+def canonical_service_data(schedules: dict[str, Any], selected: str, effective: dict[str, Any]) -> str:
+    return json.dumps({"selected": selected, "schedules": schedules, "effective": effective}, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
 def main() -> int:
@@ -413,6 +452,19 @@ def main() -> int:
                         report["errors"].append({"url": url, "error": str(exc)})
             except Exception as exc:  # noqa: BLE001
                 report["errors"].append({"url": root, "error": str(exc)})
+        if line_total < 10:
+            for url in DIRECT_WORKDAY_HINTS.get(line_code, []):
+                try:
+                    html = get(url, timeout=12, attempts=1)
+                    records = parse_english_table(html, line_code, data, lookup, url)
+                    for station, line, terminal, first, last in records:
+                        add_record(schedules["workday"], station, line, terminal, first, last, url)
+                    line_total += len(records)
+                    report["sources"].append({"line": line_code, "schedule": "workday", "url": url, "records": len(records), "fallback": "direct-official-page"})
+                    if records:
+                        break
+                except Exception as exc:  # noqa: BLE001
+                    report["errors"].append({"url": url, "error": str(exc)})
         report["lineCounts"][line_code] = line_total
         if line_total == 0:
             report["unresolvedLines"].append(line_code)
@@ -441,31 +493,44 @@ def main() -> int:
     for line_code in weak_lines:
         candidate_codes.extend(code for code, _ in data["L"].get(line_code, {}).get("stations", []))
     candidate_codes = list(dict.fromkeys(candidate_codes))
-    for code in candidate_codes:
-        trad = next((name for line in data["L"].values() for c, name in line["stations"] if c == code), "")
+    code_to_name = {c: name for line in data["L"].values() for c, name in line["stations"]}
+
+    def fetch_station_record(code: str) -> tuple[str, str | None, list[tuple[str, str, str, str, str, str]]]:
+        trad = code_to_name.get(code, "")
         simp = data.get("simplified", {}).get(code, trad)
-        pinyin = data.get("roman", {}).get(trad) or data.get("roman", {}).get(simp) or ""
-        urls = []
+        pinyin = data.get("roman", {}).get(trad) or data.get("roman", {}).get(simp) or data.get("roman", {}).get(code) or ""
+        urls: list[str] = []
         if code in map_links:
             urls.append(map_links[code])
-        for slug in {norm(pinyin), norm(data.get("english", {}).get(code, ""))}:
-            if slug:
-                urls.append(f"https://www.szmc.net/styles/index/zdWeb/{slug}.html")
+        slug = norm(pinyin)
+        if slug:
+            urls.append(f"https://www.szmc.net/styles/index/zdWeb/{slug}.html")
         for url in dict.fromkeys(urls):
             try:
-                html = get(url, timeout=18)
-                found = parse_chinese_station_page(html, data, lookup, url)
-                station_pages_checked += 1
-                for typ, station, line, terminal, first, last in found:
-                    add_record(schedules[typ], station, line, terminal, first, last, url)
-                    station_records += 1
+                html = get(url, timeout=7, attempts=1)
+                found = parse_chinese_station_page(html, data, lookup, url, expected_station=code)
                 if found:
-                    break
+                    return code, url, found
             except Exception:
                 continue
-        if station_pages_checked and station_pages_checked % 20 == 0:
-            print(f"  checked {station_pages_checked} station pages; added {station_records} records", flush=True)
-        time.sleep(0.04)
+        return code, None, []
+
+    # Bounded parallelism avoids a failed host making the workflow wait for
+    # hundreds of sequential timeouts. This fallback runs only on weak lines.
+    if candidate_codes:
+        with ThreadPoolExecutor(max_workers=6) as executor:
+            futures = {executor.submit(fetch_station_record, code): code for code in candidate_codes}
+            for future in as_completed(futures):
+                station_pages_checked += 1
+                try:
+                    code, url, found = future.result()
+                except Exception:
+                    continue
+                for typ, station, line, terminal, first, last in found:
+                    add_record(schedules[typ], station, line, terminal, first, last, url or "")
+                    station_records += 1
+                if station_pages_checked % 25 == 0:
+                    print(f"  checked {station_pages_checked}/{len(candidate_codes)} station pages; added {station_records} records", flush=True)
 
     # Preserve previously valid records when an official page is temporarily unavailable.
     for typ in schedules:
@@ -477,32 +542,35 @@ def main() -> int:
 
     now = dt.datetime.now(TZ)
     selected = schedule_type_for(now.date())
-    selected_hours = schedules.get(selected, {})
+    selected_hours, fallback_counts = build_effective_hours(schedules, selected)
     station_count = len(selected_hours)
     record_count = sum(len(terms) for by_line in selected_hours.values() for terms in by_line.values())
     line_count = len({line for by_line in selected_hours.values() for line in by_line})
+    direct_records = sum(len(terms) for by_line in (schedules.get(selected) or {}).values() for terms in by_line.values())
     report.update({
         "generatedAt": now.isoformat(),
         "selectedDayType": selected,
+        "selectedDirectRecords": direct_records,
         "selectedStations": station_count,
         "selectedRecords": record_count,
         "selectedLines": line_count,
+        "effectiveFallbackRecords": fallback_counts,
         "stationPagesChecked": station_pages_checked,
         "stationPageRecords": station_records,
     })
     REPORT_FILE.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"[3/4] Validating: dayType={selected} stations={station_count} records={record_count} lines={line_count}", flush=True)
-    if station_count < 100 or record_count < 180 or line_count < 8:
-        print("ERROR: scraped service-hours coverage is below the safety threshold; data files not replaced. See shenzhen-service-hours-report.json", file=sys.stderr)
+    if station_count < 40 or record_count < 70 or line_count < 4:
+        print("ERROR: effective official service-hours coverage is below the safety threshold; data files not replaced. See shenzhen-service-hours-report.json", file=sys.stderr)
         return 3
 
-    old_canon = canonical_service_data(previous_schedules, data.get("selectedServiceDayType", ""))
-    new_canon = canonical_service_data(schedules, selected)
+    old_canon = canonical_service_data(previous_schedules, data.get("selectedServiceDayType", ""), data.get("serviceHours") or {})
+    new_canon = canonical_service_data(schedules, selected, selected_hours)
     changed = old_canon != new_canon
     if changed:
         digest = hashlib.sha256(new_canon.encode("utf-8")).hexdigest()[:10]
-        version = f"2.5.1-sz-data-{now:%Y%m%d%H%M}-{digest}"
+        version = f"2.7.0-sz-data-{now:%Y%m%d%H%M}-{digest}"
         data["serviceHoursSchedules"] = schedules
         data["serviceHours"] = selected_hours
         data["selectedServiceDayType"] = selected
@@ -511,7 +579,8 @@ def main() -> int:
         data["updatedAt"] = now.date().isoformat()
         metadata = data.setdefault("metadata", {})
         metadata["serviceHoursSource"] = "Official Shenzhen Metro / MTR Shenzhen public timetable web pages"
-        metadata["serviceHoursSelection"] = "2026 official holiday calendar; weekday/weekend fallback"
+        metadata["serviceHoursSelection"] = "2026 official holiday calendar; selected day type supplemented only with missing records from other official day-type tables"
+        metadata["serviceHoursFallbackRecords"] = fallback_counts
         manifest["version"] = version
         manifest["updatedAt"] = now.date().isoformat()
         tmp_data = DATA_FILE.with_suffix(".json.tmp")

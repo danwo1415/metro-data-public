@@ -32,6 +32,15 @@ jobs:
       - name: Fetch official Shenzhen timetables
         run: python -u update_shenzhen_service_hours.py
 
+      - name: Upload diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shenzhen-service-hours-report
+          path: shenzhen-service-hours-report.json
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Commit changed data
         run: |
           git config user.name "github-actions[bot]"

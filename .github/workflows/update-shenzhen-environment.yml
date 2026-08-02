@@ -3,13 +3,13 @@ name: Update Shenzhen environment data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '7 * * * *'
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-shenzhen-environment
+  group: shenzhen-public-data-write
   cancel-in-progress: false
 
 jobs:

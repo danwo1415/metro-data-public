@@ -1,6 +1,38 @@
 {
-  "temperatureCandidates": 5000,
-  "humidityCandidates": 5000,
+  "generatedAt": "2026-08-02T15:08:42+00:00",
+  "officialDatasets": {
+    "weather": "29200_00903509",
+    "pm25": [
+      "29200_01000344",
+      "29200_00900269"
+    ],
+    "uvForecast": [
+      "29200_03001143"
+    ]
+  },
+  "weatherCandidateCounts": {
+    "temperature": 209,
+    "humidity": 968
+  },
+  "datasetAttempts": [
+    {
+      "dataset": "29200_01000344",
+      "status": "ok"
+    },
+    {
+      "dataset": "29200_00900269",
+      "status": "ok"
+    },
+    {
+      "dataset": "29200_03001143",
+      "status": "subscription-required",
+      "error": "dataset 29200_03001143 is not subscribed/authorized for this appKey"
+    }
+  ],
+  "candidateCounts": {
+    "pm25": 0,
+    "uv": 0
+  },
   "selected": {
     "temperature": {
       "value": 28.1,
@@ -14,70 +46,8 @@
       "time": "2020-07-03 07:20:00",
       "field": "RHSFC"
     },
-    "pm25": null
+    "pm25": null,
+    "uv": null
   },
-  "uv": {
-    "matches": [],
-    "liveBlock": ""
-  },
-  "cnemc": {
-    "attempts": [
-      {
-        "url": "https://air.cnemc.cn:18007/",
-        "status": 200,
-        "bytes": 6060
-      },
-      {
-        "url": "http://air.cnemc.cn:18007/",
-        "error": "HTTPConnectionPool(host='air.cnemc.cn', port=18007): Read timed out. (read timeout=25)"
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/HourDataPublish.ashx?city=深圳市",
-        "status": 404,
-        "bytes": 1841
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?city=深圳市",
-        "status": 404,
-        "bytes": 1845
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx",
-        "status": 404,
-        "bytes": 1845
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?city=%E6%B7%B1%E5%9C%B3%E5%B8%82",
-        "status": 404,
-        "bytes": 1845
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?cityName=%E6%B7%B1%E5%9C%B3%E5%B8%82",
-        "status": 404,
-        "bytes": 1845
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/CityDataPublishLive.ashx?area=%E6%B7%B1%E5%9C%B3%E5%B8%82",
-        "status": 404,
-        "bytes": 1845
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/Ajax/CityDataPublishLive.ashx?city=深圳市",
-        "status": 404,
-        "bytes": 1850
-      },
-      {
-        "url": "http://air.cnemc.cn:18007/HourDataPublish.ashx?city=深圳市",
-        "error": "HTTPConnectionPool(host='air.cnemc.cn', port=18007): Read timed out. (read timeout=25)"
-      },
-      {
-        "url": "http://air.cnemc.cn:18007/CityDataPublishLive.ashx?city=深圳市",
-        "error": "HTTPConnectionPool(host='air.cnemc.cn', port=18007): Read timed out. (read timeout=25)"
-      },
-      {
-        "url": "https://air.cnemc.cn:18007/天地图密钥错误，可能是因为您提供的Key不是有效的天地图开放平台Key，或此Key未对本应用授予JavaScript\u0010API权限。您可以访问如下网址了解如何获得有效的Key：http:/console.tianditu.com/api/key",
-        "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-      }
-    ]
-  }
+  "publishedStatus": "partial-optional-unavailable"
 }

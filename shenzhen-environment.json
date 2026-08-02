@@ -2,20 +2,22 @@
   "temperature": 28.1,
   "humidity": 86.5,
   "uv": null,
+  "uvIndex": null,
   "pm25": null,
   "station": {
-    "weather": "Shenzhen",
+    "weather": "深圳市",
+    "uv": null,
     "pm25": null
   },
   "sourceUpdatedAt": "2020-07-03 07:20:00",
+  "uvSourceUpdatedAt": null,
   "pm25SourceUpdatedAt": null,
-  "pm25SourceUrl": null,
-  "publishedAt": "2026-08-02T12:47:43+00:00",
-  "source": "Shenzhen Meteorological Bureau, Shenzhen Open Data Platform and China National Environmental Monitoring Centre",
+  "publishedAt": "2026-08-02T15:08:58+00:00",
+  "source": "深圳市政府数据开放平台／深圳市气象局",
   "sources": {
     "weatherDataset": "29200_00903509",
-    "uvUrl": "https://weather.sz.gov.cn/qixiangfuwu/zhuanxiangfuwu/jiankangqixiangfuwu/index.html",
-    "pm25Platform": "https://air.cnemc.cn:18007/"
+    "uvDataset": null,
+    "pm25Dataset": null
   },
-  "status": "partial-pm25-unavailable"
+  "status": "partial-optional-unavailable"
 }

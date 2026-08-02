@@ -1,12 +1,15 @@
-Shenzhen environment updater v2 fix
+Shenzhen environment updater v3
 
-Fixes:
-- Uses the official service.xhtml endpoint rather than the invalid service.json path.
-- Reads official weather fields T (temperature) and RHSFC (relative humidity).
-- Keeps PM2.5 key matching compatible with PM2.5 / PM25 / PM2_5 variants.
-- Gives a clear error if the appKey is valid but either API has not been subscribed.
-- Uploads a short-lived diagnostic report from GitHub Actions on failure.
+What changed
+- Removes the obsolete/unavailable dataset ID 29200_00900269 from the workflow.
+- Publishes official Shenzhen temperature and humidity even when no verified official real-time PM2.5 dataset is available.
+- Continues attempting to read the Shenzhen Meteorological Bureau UV page.
+- Writes pm25 as null, so the app displays -- rather than using stale or unofficial data.
+- The workflow now succeeds when temperature and humidity are valid; UV may be null without blocking publication.
 
-Required API subscriptions for the appKey:
-- 29200_00903509 Shenzhen automatic-station grid observations
-- 29200_00900269 Shenzhen PM2.5 real-time query
+Required secret
+- SZ_OPEN_DATA_APP_KEY, subscribed to dataset 29200_00903509.
+
+PM2.5 policy
+- Do not restore 29200_00900269 unless the current Shenzhen Open Data catalog exposes it again and its interface is verified.
+- Do not substitute a third-party PM2.5 value while the app labels the data as official.

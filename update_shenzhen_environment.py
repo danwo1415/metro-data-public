@@ -27,7 +27,7 @@ REPORT = ROOT / "shenzhen-environment-report.json"
 
 API_BASE = "https://opendata.sz.gov.cn/api/{dataset}/1/service.xhtml"
 WEATHER_DATASET = "29200_00903509"  # Shenzhen automatic-station observations
-PM25_DATASET = "29200_00900269"    # Shenzhen PM2.5 real-time query
+PM25_DATASET = None  # No currently discoverable official Shenzhen real-time PM2.5 dataset ID
 UV_URL = "https://weather.sz.gov.cn/qixiangfuwu/zhuanxiangfuwu/jiankangqixiangfuwu/index.html"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; MetroDataUpdater/1.0; +https://github.com/danwo1415/metro-data-public)",
@@ -197,10 +197,9 @@ def main() -> int:
     temperature = choose(temp_candidates, preferred_weather)
     humidity = choose(humidity_candidates, preferred_weather)
 
-    print("[2/4] Fetching Shenzhen official PM2.5 observations...", flush=True)
-    pm_payload = fetch_dataset(PM25_DATASET, app_key)
-    pm_candidates = metric_candidates(pm_payload, {"pm25", "pm2.5", "细颗粒物", "细颗粒物pm25"}, 0, 1000)
-    pm25 = choose(pm_candidates, ("福田", "竹子林", "深圳", "南山", "罗湖"))
+    print("[2/4] PM2.5 skipped: no verified current official real-time dataset ID", flush=True)
+    pm_candidates = []
+    pm25 = None
 
     print("[3/4] Reading Shenzhen Meteorological Bureau UV page...", flush=True)
     try:
@@ -208,7 +207,7 @@ def main() -> int:
     except Exception as exc:
         uv, uv_time, uv_debug = None, None, {"error": str(exc)}
 
-    missing = [name for name, item in (("temperature", temperature), ("humidity", humidity), ("pm25", pm25)) if item is None]
+    missing = [name for name, item in (("temperature", temperature), ("humidity", humidity)) if item is None]
     report = {
         "temperatureCandidates": len(temp_candidates),
         "humidityCandidates": len(humidity_candidates),
@@ -217,7 +216,8 @@ def main() -> int:
         "uv": uv_debug,
         "sources": {
             "weatherDataset": WEATHER_DATASET,
-            "pm25Dataset": PM25_DATASET,
+            "pm25Dataset": None,
+            "pm25Status": "No verified current official Shenzhen real-time PM2.5 dataset ID",
             "uvUrl": UV_URL,
         },
     }
@@ -226,25 +226,26 @@ def main() -> int:
         print("ERROR: official API returned no valid " + ", ".join(missing) + "; output not replaced", file=sys.stderr)
         return 3
 
-    source_times = [str(x.get("time", "")) for x in (temperature, humidity, pm25) if x and x.get("time")]
+    source_times = [str(x.get("time", "")) for x in (temperature, humidity) if x and x.get("time")]
     payload = {
         "temperature": clean(temperature["value"]),
         "humidity": clean(humidity["value"]),
         "uv": clean(uv),
-        "pm25": clean(pm25["value"]),
+        "pm25": None,
         "station": {
             "weather": temperature.get("station") or humidity.get("station") or "Shenzhen",
-            "pm25": pm25.get("station") or "Shenzhen",
+            "pm25": None,
         },
         "sourceUpdatedAt": max(source_times) if source_times else uv_time,
         "publishedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": "Shenzhen Meteorological Bureau and Shenzhen Open Data Platform",
         "sources": {
             "weatherDataset": WEATHER_DATASET,
-            "pm25Dataset": PM25_DATASET,
+            "pm25Dataset": None,
+            "pm25Status": "No verified current official Shenzhen real-time PM2.5 dataset ID",
             "uvUrl": UV_URL,
         },
-        "status": "ok" if uv is not None else "partial-uv-unavailable",
+        "status": "partial-pm25-unavailable" if uv is not None else "partial-uv-and-pm25-unavailable",
     }
 
     # Avoid a new commit when the official values and source timestamp did not change.
@@ -262,7 +263,7 @@ def main() -> int:
     temp_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temp_path.replace(OUTPUT)
     print(
-        "[4/4] SUCCESS: temp={temperature}C humidity={humidity}% uv={uv} pm25={pm25}ug/m3".format(**payload),
+        "[4/4] SUCCESS: temp={temperature}C humidity={humidity}% uv={uv} pm25=unavailable".format(**payload),
         flush=True,
     )
     return 0

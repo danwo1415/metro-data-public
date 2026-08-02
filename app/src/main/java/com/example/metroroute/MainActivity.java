@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,6 +35,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -46,6 +50,10 @@ public class MainActivity extends Activity {
             "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en";
     private static final String EPD_PM25_URL =
             "https://www.aqhi.gov.hk/epd/ddata/html/out/24pc_Eng.xml";
+    private static final String EPD_AQHI_PAGE_URL =
+            "https://www.aqhi.gov.hk/en/";
+    private static final String DATA_GOV_FILTER_URL =
+            "https://api.data.gov.hk/v2/filter?q=";
     private static final String MTR_FARES_URL =
             "https://opendata.mtr.com.hk/data/mtr_lines_fares.csv";
     private static final String AIRPORT_EXPRESS_FARES_URL =
@@ -157,12 +165,7 @@ public class MainActivity extends Activity {
         result.put("humidity", findWeatherValue(root.optJSONObject("humidity"), "Hong Kong Observatory"));
         result.put("uv", readUvValue(root.opt("uvindex")));
 
-        String pm25 = "--";
-        try {
-            pm25 = readPm25Value(httpGet(EPD_PM25_URL));
-        } catch (Exception ignored) {
-            // Keep the other weather readings visible when the EPD feed is unavailable.
-        }
+        String pm25 = readPm25WithFallbacks();
         result.put("pm25", pm25);
         return result;
     }
@@ -200,6 +203,196 @@ public class MainActivity extends Activity {
         return cleanNumber(uvObject);
     }
 
+    private String readPm25WithFallbacks() {
+        // 1) Direct EPD XML feed. This is the authoritative source.
+        try {
+            String xml = httpGet(EPD_PM25_URL, true);
+            String value = readPm25Value(xml);
+            if (!"--".equals(value)) return value;
+            value = readPm25ValueRegex(xml);
+            if (!"--".equals(value)) return value;
+        } catch (Exception ignored) {
+            // Continue to an official DATA.GOV.HK proxy when the AQHI host rejects
+            // a native Android request or changes its XML response headers.
+        }
+
+        // 2) DATA.GOV.HK Filter API. It reads the same EPD resource and returns JSON,
+        // avoiding device-specific TLS, redirect and XML content-type problems.
+        try {
+            JSONObject query = new JSONObject();
+            query.put("resource", EPD_PM25_URL);
+            query.put("format", "json");
+            String url = DATA_GOV_FILTER_URL
+                    + URLEncoder.encode(query.toString(), StandardCharsets.UTF_8.name());
+            String text = httpGet(url, true).trim();
+            Object json = text.startsWith("[") ? new JSONArray(text) : new JSONObject(text);
+            String value = readPm25FromJson(json);
+            if (!"--".equals(value)) return value;
+        } catch (Exception ignored) {
+            // Continue to the official EPD public summary page.
+        }
+
+        // 3) Official EPD public summary page. This is a final fallback for cases
+        // where the XML download endpoint is temporarily unavailable.
+        try {
+            String value = readPm25FromHtml(httpGet(EPD_AQHI_PAGE_URL, true));
+            if (!"--".equals(value)) return value;
+        } catch (Exception ignored) {
+            // Returning -- keeps the rest of the weather row usable.
+        }
+        return "--";
+    }
+
+    private String readPm25FromJson(Object root) {
+        List<Pm25Candidate> candidates = new ArrayList<>();
+        collectPm25Candidates(root, candidates);
+        return selectPm25Candidate(candidates);
+    }
+
+    private void collectPm25Candidates(Object node, List<Pm25Candidate> output) {
+        if (node instanceof JSONObject) {
+            JSONObject object = (JSONObject) node;
+            String station = "";
+            String dateTime = "";
+            String value = "--";
+            Iterator<String> keys = object.keys();
+            while (keys.hasNext()) {
+                String key = keys.next();
+                Object child = object.opt(key);
+                String normalized = key.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]", "");
+                if (normalized.equals("stationname") || normalized.equals("station")) {
+                    station = child == null ? "" : String.valueOf(child).trim();
+                } else if (normalized.equals("datetime") || normalized.equals("date")
+                        || normalized.equals("lastbuilddate")) {
+                    dateTime = child == null ? "" : String.valueOf(child).trim();
+                } else if (normalized.equals("pm25") || normalized.equals("fineparticulates")
+                        || normalized.equals("finesuspendedparticulates")) {
+                    value = cleanNumber(child);
+                }
+            }
+            if (!"--".equals(value)) output.add(new Pm25Candidate(station, dateTime, value));
+
+            keys = object.keys();
+            while (keys.hasNext()) collectPm25Candidates(object.opt(keys.next()), output);
+        } else if (node instanceof JSONArray) {
+            JSONArray array = (JSONArray) node;
+            for (int i = 0; i < array.length(); i++) collectPm25Candidates(array.opt(i), output);
+        }
+    }
+
+    private String readPm25ValueRegex(String xml) {
+        List<Pm25Candidate> candidates = new ArrayList<>();
+        Pattern rowPattern = Pattern.compile(
+                "<PollutantConcentration\\b[^>]*>(.*?)</PollutantConcentration>",
+                Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher rows = rowPattern.matcher(xml);
+        while (rows.find()) {
+            String row = rows.group(1);
+            String station = findXmlTag(row, "StationName");
+            String dateTime = findXmlTag(row, "DateTime");
+            String value = cleanNumber(findXmlTag(row, "PM2\\.5"));
+            if (!"--".equals(value)) candidates.add(new Pm25Candidate(station, dateTime, value));
+        }
+        return selectPm25Candidate(candidates);
+    }
+
+    private String findXmlTag(String text, String tagRegex) {
+        Pattern pattern = Pattern.compile("<" + tagRegex + "\\b[^>]*>(.*?)</" + tagRegex + ">",
+                Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher matcher = pattern.matcher(text);
+        if (!matcher.find()) return "";
+        return decodeBasicHtml(stripTags(matcher.group(1))).trim();
+    }
+
+    private String readPm25FromHtml(String html) {
+        List<Pm25Candidate> candidates = new ArrayList<>();
+        Pattern rowPattern = Pattern.compile("<tr\\b[^>]*>(.*?)</tr>",
+                Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Pattern cellPattern = Pattern.compile("<t[dh]\\b[^>]*>(.*?)</t[dh]>",
+                Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+        Matcher rows = rowPattern.matcher(html);
+        while (rows.find()) {
+            List<String> cells = new ArrayList<>();
+            Matcher cellMatcher = cellPattern.matcher(rows.group(1));
+            while (cellMatcher.find()) {
+                cells.add(decodeBasicHtml(stripTags(cellMatcher.group(1))).trim());
+            }
+            // Station, NO2, O3, SO2, CO, PM10, PM2.5, AQHI.
+            if (cells.size() >= 8) {
+                String station = cells.get(0);
+                String value = cleanNumber(cells.get(6));
+                if (!"--".equals(value) && looksLikeStation(station)) {
+                    candidates.add(new Pm25Candidate(station, "", value));
+                }
+            }
+        }
+        return selectPm25Candidate(candidates);
+    }
+
+    private boolean looksLikeStation(String value) {
+        String normalized = value.toLowerCase(Locale.ROOT).replace(" ", "");
+        return normalized.contains("central/western")
+                || normalized.contains("centralandwestern")
+                || normalized.equals("mongkok")
+                || normalized.equals("eastern")
+                || normalized.contains("中西")
+                || normalized.contains("旺角")
+                || normalized.contains("東區")
+                || normalized.contains("东区");
+    }
+
+    private String stripTags(String value) {
+        return value == null ? "" : value.replaceAll("(?s)<[^>]+>", " ");
+    }
+
+    private String decodeBasicHtml(String value) {
+        if (value == null) return "";
+        return value.replace("&nbsp;", " ")
+                .replace("&#160;", " ")
+                .replace("&amp;", "&")
+                .replace("&lt;", "<")
+                .replace("&gt;", ">");
+    }
+
+    private String selectPm25Candidate(List<Pm25Candidate> candidates) {
+        if (candidates.isEmpty()) return "--";
+        String[] preferredStations = {
+                "central/western", "centralandwestern", "中西區", "中西区",
+                "mongkok", "旺角", "eastern", "東區", "东区"
+        };
+        Pm25Candidate best = null;
+        int bestPriority = Integer.MAX_VALUE;
+        for (Pm25Candidate candidate : candidates) {
+            String station = candidate.station.toLowerCase(Locale.ROOT)
+                    .replace(" ", "").replace("-", "");
+            int priority = preferredStations.length;
+            for (int i = 0; i < preferredStations.length; i++) {
+                if (station.equals(preferredStations[i]) || station.contains(preferredStations[i])) {
+                    priority = i;
+                    break;
+                }
+            }
+            if (best == null || priority < bestPriority
+                    || (priority == bestPriority && candidate.dateTime.compareTo(best.dateTime) > 0)) {
+                best = candidate;
+                bestPriority = priority;
+            }
+        }
+        return best == null ? "--" : best.value;
+    }
+
+    private static final class Pm25Candidate {
+        final String station;
+        final String dateTime;
+        final String value;
+
+        Pm25Candidate(String station, String dateTime, String value) {
+            this.station = station == null ? "" : station;
+            this.dateTime = dateTime == null ? "" : dateTime;
+            this.value = value == null ? "--" : value;
+        }
+    }
+
     private String readPm25Value(String xml) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
@@ -208,12 +401,7 @@ public class MainActivity extends Activity {
         factory.setExpandEntityReferences(false);
         Document document = factory.newDocumentBuilder().parse(new InputSource(new StringReader(xml)));
         NodeList rows = document.getElementsByTagName("PollutantConcentration");
-
-        String[] preferredStations = {"Central/Western", "Central and Western", "Mong Kok", "Eastern"};
-        String bestValue = "--";
-        String bestDate = "";
-        int bestPriority = Integer.MAX_VALUE;
-
+        List<Pm25Candidate> candidates = new ArrayList<>();
         for (int i = 0; i < rows.getLength(); i++) {
             Node node = rows.item(i);
             if (!(node instanceof Element)) continue;
@@ -221,22 +409,9 @@ public class MainActivity extends Activity {
             String station = childText(row, "StationName");
             String dateTime = childText(row, "DateTime");
             String value = cleanNumber(childText(row, "PM2.5"));
-            if ("--".equals(value)) continue;
-
-            int priority = preferredStations.length;
-            for (int p = 0; p < preferredStations.length; p++) {
-                if (preferredStations[p].equalsIgnoreCase(station)) {
-                    priority = p;
-                    break;
-                }
-            }
-            if (priority < bestPriority || (priority == bestPriority && dateTime.compareTo(bestDate) > 0)) {
-                bestPriority = priority;
-                bestDate = dateTime;
-                bestValue = value;
-            }
+            if (!"--".equals(value)) candidates.add(new Pm25Candidate(station, dateTime, value));
         }
-        return bestValue;
+        return selectPm25Candidate(candidates);
     }
 
     private String childText(Element parent, String tagName) {
@@ -392,13 +567,24 @@ public class MainActivity extends Activity {
     }
 
     private String httpGet(String urlString) throws IOException {
+        return httpGet(urlString, false);
+    }
+
+    private String httpGet(String urlString, boolean browserHeaders) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(urlString).openConnection();
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(15000);
         connection.setReadTimeout(20000);
         connection.setInstanceFollowRedirects(true);
-        connection.setRequestProperty("User-Agent", "MetroRoutePlanner/2.4.11");
-        connection.setRequestProperty("Accept", "application/json,text/xml,text/csv,text/plain,*/*");
+        connection.setUseCaches(false);
+        connection.setRequestProperty("User-Agent", browserHeaders
+                ? "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 "
+                + "(KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36"
+                : "MetroRoutePlanner/2.4.12");
+        connection.setRequestProperty("Accept",
+                "application/json,application/xml,text/xml,text/html,text/csv,text/plain,*/*");
+        connection.setRequestProperty("Accept-Language", "en-HK,en;q=0.9,zh-HK;q=0.8");
+        connection.setRequestProperty("Cache-Control", "no-cache");
         int status = connection.getResponseCode();
         InputStream stream = status >= 200 && status < 300
                 ? connection.getInputStream() : connection.getErrorStream();

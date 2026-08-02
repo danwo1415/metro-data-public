@@ -1,0 +1,10 @@
+{
+  "temperature": null,
+  "humidity": null,
+  "uv": null,
+  "pm25": null,
+  "station": null,
+  "sourceUpdatedAt": null,
+  "publishedAt": null,
+  "status": "awaiting-SZ_OPEN_DATA_APP_KEY"
+}

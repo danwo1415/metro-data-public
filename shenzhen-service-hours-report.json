@@ -3,20 +3,9 @@
     {
       "line": "SZ1",
       "schedule": "workday",
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html",
-      "records": 58
-    },
-    {
-      "line": "SZ1",
-      "schedule": "dayoff",
       "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
-      "records": 58
-    },
-    {
-      "line": "SZ1",
-      "schedule": "holiday",
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79724.html",
-      "records": 58
+      "records": 58,
+      "fallback": "direct-official-page"
     },
     {
       "line": "SZ28",
@@ -100,6 +89,10 @@
   ],
   "errors": [
     {
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/",
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line8/",
       "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line8/"
     },
@@ -150,7 +143,7 @@
     "SZ13"
   ],
   "lineCounts": {
-    "SZ1": 174,
+    "SZ1": 58,
     "SZ28": 180,
     "SZ3": 60,
     "SZ4": 0,
@@ -167,7 +160,7 @@
     "SZ20": 8,
     "SZ13": 0
   },
-  "generatedAt": "2026-08-03T11:56:13.443507+08:00",
+  "generatedAt": "2026-08-03T18:07:21.679779+08:00",
   "selectedDayType": "workday",
   "selectedDirectRecords": 193,
   "selectedStations": 106,

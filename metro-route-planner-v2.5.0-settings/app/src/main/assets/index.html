@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#f4f6fa">
+  <title>地鐵路線規劃</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="top-shell">
+    <nav id="cityTabs" class="city-tabs" aria-label="城市"></nav>
+  </header>
+
+  <main class="main-shell">
+    <section id="screen-search" class="screen active">
+      <div class="search-card card">
+        <div class="search-grid">
+          <div class="field">
+            <label id="fromLabel" for="fromInput">起點</label>
+            <input id="fromInput" autocomplete="off" placeholder="中文／英文／拼音首字母">
+            <div id="fromSuggestions" class="suggestions"></div>
+          </div>
+          <button id="swapButton" class="swap-button" type="button" aria-label="交換">⇄</button>
+          <div class="field">
+            <label id="toLabel" for="toInput">終點</label>
+            <input id="toInput" autocomplete="off" placeholder="中文／英文／拼音首字母">
+            <div id="toSuggestions" class="suggestions"></div>
+          </div>
+        </div>
+        <button id="searchButton" class="primary-button" type="button">查詢路線</button>
+        <div id="dataStatus" class="data-status"></div>
+      </div>
+
+      <div class="mode-tabs" role="tablist">
+        <button id="fastMode" class="mode-tab active" type="button">時間最短</button>
+        <button id="fewMode" class="mode-tab" type="button">換乘最少</button>
+      </div>
+
+      <section id="result" class="result-card card" aria-live="polite"></section>
+    </section>
+
+    <section id="screen-favorites" class="screen">
+      <div class="section-title"><h1 id="favoritesTitle">收藏</h1></div>
+      <div id="favoritesList" class="stack"></div>
+    </section>
+
+    <section id="screen-about" class="screen">
+      <div class="section-title"><h1 id="aboutTitle">關於</h1></div>
+      <article class="card prose">
+        <h2 id="aboutAppTitle">地鐵路線規劃</h2>
+        <p id="aboutVersion">版本 2.5.0-settings</p>
+        <p id="aboutDescription"></p>
+        <div class="divider"></div>
+        <h3 id="dataCoverageTitle"></h3>
+        <div id="dataCoverage"></div>
+      </article>
+    </section>
+
+    <section id="screen-settings" class="screen">
+      <div class="section-title"><h1 id="settingsTitle">設定</h1></div>
+      <article class="card setting-card">
+        <h2 id="languageTitle">語言</h2>
+        <div id="languageOptions" class="option-list"></div>
+      </article>
+      <article class="card setting-card">
+        <h2 id="cityOrderTitle">城市選擇</h2>
+        <p id="cityOrderHelp" class="help-text"></p>
+        <div id="citySortList" class="city-sort-list"></div>
+      </article>
+    </section>
+  </main>
+
+  <nav id="bottomNav" class="bottom-nav" aria-label="主選單">
+    <button data-screen="search" class="nav-item active" type="button"><span class="nav-icon">⌕</span><span data-nav-label="search">查詢</span></button>
+    <button data-screen="favorites" class="nav-item" type="button"><span class="nav-icon">☆</span><span data-nav-label="favorites">收藏</span></button>
+    <button data-screen="about" class="nav-item" type="button"><span class="nav-icon">ⓘ</span><span data-nav-label="about">關於</span></button>
+    <button data-screen="settings" class="nav-item" type="button"><span class="nav-icon">⚙</span><span data-nav-label="settings">設定</span></button>
+  </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

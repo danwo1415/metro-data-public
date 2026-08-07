@@ -167,14 +167,14 @@
     "SZ20": 8,
     "SZ13": 0
   },
-  "generatedAt": "2026-08-07T21:41:08.008956+08:00",
-  "selectedDayType": "workday",
-  "selectedDirectRecords": 193,
+  "generatedAt": "2026-08-08T03:17:13.546783+08:00",
+  "selectedDayType": "dayoff",
+  "selectedDirectRecords": 154,
   "selectedStations": 106,
   "selectedRecords": 193,
   "selectedLines": 5,
   "effectiveFallbackRecords": {
-    "workday": 0,
+    "workday": 39,
     "dayoff": 0,
     "holiday": 0
   },

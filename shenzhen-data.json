@@ -1,5 +1,5 @@
 {
-  "version": "2.7.0-sz-data-202608101605-19da8dbc15",
+  "version": "2.7.0-sz-data-202608102146-ee5a2d5d5a",
   "updatedAt": "2026-08-10",
   "city": "深圳",
   "cityEn": "Shenzhen",
@@ -3892,6 +3892,478 @@
     "SZ351": "hzc"
   },
   "serviceHours": {
+    "SZ001": {
+      "SZ1": {
+        "SZ030": {
+          "first": "06:30",
+          "last": "23:00",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ002": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:59",
+          "last": "00:06",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:32",
+          "last": "23:02",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ003": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:57",
+          "last": "00:04",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:33",
+          "last": "23:03",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ3": {
+        "SZ099": {
+          "first": "06:07",
+          "last": "00:21",
+          "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
+        }
+      }
+    },
+    "SZ004": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:55",
+          "last": "00:02",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:36",
+          "last": "23:06",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ28": {
+        "SZ031": {
+          "first": "06:34",
+          "last": "23:41",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+        },
+        "SZ060": {
+          "first": "06:19",
+          "last": "23:58",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+        }
+      }
+    },
+    "SZ005": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:53",
+          "last": "00:00",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:38",
+          "last": "23:08",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ006": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:51",
+          "last": "23:58",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:40",
+          "last": "23:10",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ007": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:48",
+          "last": "23:55",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:43",
+          "last": "23:13",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ008": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:46",
+          "last": "23:53",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:45",
+          "last": "23:15",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ009": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:45",
+          "last": "23:51",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:46",
+          "last": "23:16",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ3": {
+        "SZ099": {
+          "first": "06:25",
+          "last": "00:06",
+          "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
+        }
+      }
+    },
+    "SZ010": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:42",
+          "last": "23:48",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:49",
+          "last": "23:19",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ011": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:40",
+          "last": "23:46",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:51",
+          "last": "23:21",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ11": {
+        "SZ050": {
+          "first": "06:37",
+          "last": "00:34",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+        },
+        "SZ258": {
+          "first": "06:33",
+          "last": "23:33",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+        }
+      }
+    },
+    "SZ012": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:38",
+          "last": "23:44",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:34",
+          "last": "23:23",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ013": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:35",
+          "last": "23:41",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:36",
+          "last": "23:26",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ014": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:33",
+          "last": "23:39",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:38",
+          "last": "23:28",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ015": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:31",
+          "last": "23:37",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:30",
+          "last": "23:30",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ28": {
+        "SZ031": {
+          "first": "06:24",
+          "last": "00:12",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+        },
+        "SZ060": {
+          "first": "06:09",
+          "last": "23:27",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+        }
+      }
+    },
+    "SZ016": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:38",
+          "last": "23:35",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:32",
+          "last": "23:32",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ017": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:36",
+          "last": "23:33",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:35",
+          "last": "23:34",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ018": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:34",
+          "last": "23:31",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:37",
+          "last": "23:37",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ019": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:42",
+          "last": "23:27",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:40",
+          "last": "23:40",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ020": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:40",
+          "last": "23:25",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:30",
+          "last": "23:42",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ021": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:38",
+          "last": "23:23",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:32",
+          "last": "23:44",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ022": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:36",
+          "last": "23:21",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:34",
+          "last": "23:46",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      },
+      "SZ11": {
+        "SZ050": {
+          "first": "06:18",
+          "last": "00:15",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+        },
+        "SZ258": {
+          "first": "06:28",
+          "last": "23:51",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+        }
+      }
+    },
+    "SZ023": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:49",
+          "last": "23:19",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:37",
+          "last": "23:48",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ024": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:47",
+          "last": "23:17",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:39",
+          "last": "23:50",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ025": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:45",
+          "last": "23:15",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:41",
+          "last": "23:52",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ026": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:43",
+          "last": "23:13",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:43",
+          "last": "23:54",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ027": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:41",
+          "last": "23:11",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:45",
+          "last": "23:56",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ028": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:37",
+          "last": "23:07",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:49",
+          "last": "00:00",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ029": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:33",
+          "last": "23:03",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        },
+        "SZ030": {
+          "first": "06:53",
+          "last": "00:04",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
+    "SZ030": {
+      "SZ1": {
+        "SZ001": {
+          "first": "06:30",
+          "last": "23:00",
+          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+        }
+      }
+    },
     "SZ031": {
       "SZ28": {
         "SZ060": {
@@ -4050,32 +4522,6 @@
           "first": "06:06",
           "last": "23:24",
           "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-        }
-      }
-    },
-    "SZ015": {
-      "SZ28": {
-        "SZ031": {
-          "first": "06:24",
-          "last": "00:12",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-        },
-        "SZ060": {
-          "first": "06:09",
-          "last": "23:27",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "06:01",
-          "last": "23:38",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "05:56",
-          "last": "23:30",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
         }
       }
     },
@@ -4275,32 +4721,6 @@
         }
       }
     },
-    "SZ004": {
-      "SZ28": {
-        "SZ031": {
-          "first": "06:34",
-          "last": "23:41",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-        },
-        "SZ060": {
-          "first": "06:19",
-          "last": "23:58",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "06:17",
-          "last": "00:03",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:26",
-          "last": "23:06",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
     "SZ055": {
       "SZ28": {
         "SZ031": {
@@ -4407,27 +4827,6 @@
         }
       }
     },
-    "SZ009": {
-      "SZ3": {
-        "SZ099": {
-          "first": "06:25",
-          "last": "00:06",
-          "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "06:07",
-          "last": "23:52",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:36",
-          "last": "23:16",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
     "SZ075": {
       "SZ3": {
         "SZ099": {
@@ -4470,27 +4869,6 @@
           "first": "06:04",
           "last": "00:19",
           "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-        }
-      }
-    },
-    "SZ003": {
-      "SZ3": {
-        "SZ099": {
-          "first": "06:07",
-          "last": "00:21",
-          "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "06:20",
-          "last": "00:05",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:24",
-          "last": "23:04",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
         }
       }
     },
@@ -4674,32 +5052,6 @@
         }
       }
     },
-    "SZ011": {
-      "SZ11": {
-        "SZ050": {
-          "first": "06:37",
-          "last": "00:34",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-        },
-        "SZ258": {
-          "first": "06:33",
-          "last": "23:33",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "06:02",
-          "last": "23:47",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:41",
-          "last": "23:21",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
     "SZ213": {
       "SZ11": {
         "SZ050": {
@@ -4725,32 +5077,6 @@
           "first": "06:46",
           "last": "23:46",
           "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-        }
-      }
-    },
-    "SZ022": {
-      "SZ11": {
-        "SZ050": {
-          "first": "06:18",
-          "last": "00:15",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-        },
-        "SZ258": {
-          "first": "06:28",
-          "last": "23:51",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-        }
-      },
-      "SZ1": {
-        "SZ001": {
-          "first": "05:45",
-          "last": "23:22",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:12",
-          "last": "23:46",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
         }
       }
     },
@@ -4974,332 +5300,6 @@
           "source": "https://www.szmc.net/szmc_en/Time_Table/Line20/202112/95479.html"
         }
       }
-    },
-    "SZ001": {
-      "SZ1": {
-        "SZ030": {
-          "first": "06:30",
-          "last": "23:00",
-          "source": "https://www.szmc.net/styles/index/zdWeb/luohu.html"
-        }
-      }
-    },
-    "SZ002": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:21",
-          "last": "00:06",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:22",
-          "last": "23:02",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ005": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:15",
-          "last": "00:00",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:28",
-          "last": "23:08",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ006": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:13",
-          "last": "23:58",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:30",
-          "last": "23:10",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ007": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:10",
-          "last": "23:55",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:33",
-          "last": "23:13",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ008": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:09",
-          "last": "23:54",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:35",
-          "last": "23:15",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ010": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:04",
-          "last": "23:49",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:39",
-          "last": "23:19",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ012": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:00",
-          "last": "23:45",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "05:49",
-          "last": "23:23",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ013": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:05",
-          "last": "23:42",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "05:52",
-          "last": "23:26",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ014": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:03",
-          "last": "23:40",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "05:54",
-          "last": "23:28",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ016": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:59",
-          "last": "23:36",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "05:58",
-          "last": "23:32",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ017": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:57",
-          "last": "23:34",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:00",
-          "last": "23:34",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ018": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:55",
-          "last": "23:32",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:02",
-          "last": "23:36",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ019": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:51",
-          "last": "23:28",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:06",
-          "last": "23:40",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ020": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:49",
-          "last": "23:26",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:08",
-          "last": "23:42",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ021": {
-      "SZ1": {
-        "SZ001": {
-          "first": "05:47",
-          "last": "23:24",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:10",
-          "last": "23:44",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ023": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:32",
-          "last": "23:19",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:01",
-          "last": "23:49",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ024": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:31",
-          "last": "23:17",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:03",
-          "last": "23:51",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ025": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:29",
-          "last": "23:15",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:05",
-          "last": "23:53",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ026": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:26",
-          "last": "23:13",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:07",
-          "last": "23:55",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ027": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:24",
-          "last": "23:11",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:09",
-          "last": "23:57",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ028": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:28",
-          "last": "23:07",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:13",
-          "last": "00:01",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ029": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:24",
-          "last": "23:03",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        },
-        "SZ030": {
-          "first": "06:18",
-          "last": "00:06",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
-    },
-    "SZ030": {
-      "SZ1": {
-        "SZ001": {
-          "first": "06:21",
-          "last": "23:00",
-          "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-        }
-      }
     }
   },
   "metadata": {
@@ -5323,6 +5323,478 @@
   },
   "serviceHoursSchedules": {
     "workday": {
+      "SZ001": {
+        "SZ1": {
+          "SZ030": {
+            "first": "06:30",
+            "last": "23:00",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ002": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:59",
+            "last": "00:06",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:32",
+            "last": "23:02",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ003": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:57",
+            "last": "00:04",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:33",
+            "last": "23:03",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ3": {
+          "SZ099": {
+            "first": "06:07",
+            "last": "00:21",
+            "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
+          }
+        }
+      },
+      "SZ004": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:55",
+            "last": "00:02",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:36",
+            "last": "23:06",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ28": {
+          "SZ031": {
+            "first": "06:34",
+            "last": "23:41",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+          },
+          "SZ060": {
+            "first": "06:19",
+            "last": "23:58",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+          }
+        }
+      },
+      "SZ005": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:53",
+            "last": "00:00",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:38",
+            "last": "23:08",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ006": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:51",
+            "last": "23:58",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:40",
+            "last": "23:10",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ007": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:48",
+            "last": "23:55",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:43",
+            "last": "23:13",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ008": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:46",
+            "last": "23:53",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:45",
+            "last": "23:15",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ009": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:45",
+            "last": "23:51",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:46",
+            "last": "23:16",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ3": {
+          "SZ099": {
+            "first": "06:25",
+            "last": "00:06",
+            "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
+          }
+        }
+      },
+      "SZ010": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:42",
+            "last": "23:48",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:49",
+            "last": "23:19",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ011": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:40",
+            "last": "23:46",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:51",
+            "last": "23:21",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ11": {
+          "SZ050": {
+            "first": "06:37",
+            "last": "00:34",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+          },
+          "SZ258": {
+            "first": "06:33",
+            "last": "23:33",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+          }
+        }
+      },
+      "SZ012": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:38",
+            "last": "23:44",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:34",
+            "last": "23:23",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ013": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:35",
+            "last": "23:41",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:36",
+            "last": "23:26",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ014": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:33",
+            "last": "23:39",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:38",
+            "last": "23:28",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ015": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:31",
+            "last": "23:37",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:30",
+            "last": "23:30",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ28": {
+          "SZ031": {
+            "first": "06:24",
+            "last": "00:12",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+          },
+          "SZ060": {
+            "first": "06:09",
+            "last": "23:27",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
+          }
+        }
+      },
+      "SZ016": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:38",
+            "last": "23:35",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:32",
+            "last": "23:32",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ017": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:36",
+            "last": "23:33",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:35",
+            "last": "23:34",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ018": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:34",
+            "last": "23:31",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:37",
+            "last": "23:37",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ019": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:42",
+            "last": "23:27",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:40",
+            "last": "23:40",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ020": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:40",
+            "last": "23:25",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:30",
+            "last": "23:42",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ021": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:38",
+            "last": "23:23",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:32",
+            "last": "23:44",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ022": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:36",
+            "last": "23:21",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:34",
+            "last": "23:46",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        },
+        "SZ11": {
+          "SZ050": {
+            "first": "06:18",
+            "last": "00:15",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+          },
+          "SZ258": {
+            "first": "06:28",
+            "last": "23:51",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
+          }
+        }
+      },
+      "SZ023": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:49",
+            "last": "23:19",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:37",
+            "last": "23:48",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ024": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:47",
+            "last": "23:17",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:39",
+            "last": "23:50",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ025": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:45",
+            "last": "23:15",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:41",
+            "last": "23:52",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ026": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:43",
+            "last": "23:13",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:43",
+            "last": "23:54",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ027": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:41",
+            "last": "23:11",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:45",
+            "last": "23:56",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ028": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:37",
+            "last": "23:07",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:49",
+            "last": "00:00",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ029": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:33",
+            "last": "23:03",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          },
+          "SZ030": {
+            "first": "06:53",
+            "last": "00:04",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
+      "SZ030": {
+        "SZ1": {
+          "SZ001": {
+            "first": "06:30",
+            "last": "23:00",
+            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html"
+          }
+        }
+      },
       "SZ031": {
         "SZ28": {
           "SZ060": {
@@ -5481,32 +5953,6 @@
             "first": "06:06",
             "last": "23:24",
             "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-          }
-        }
-      },
-      "SZ015": {
-        "SZ28": {
-          "SZ031": {
-            "first": "06:24",
-            "last": "00:12",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-          },
-          "SZ060": {
-            "first": "06:09",
-            "last": "23:27",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "06:01",
-            "last": "23:38",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "05:56",
-            "last": "23:30",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
           }
         }
       },
@@ -5706,32 +6152,6 @@
           }
         }
       },
-      "SZ004": {
-        "SZ28": {
-          "SZ031": {
-            "first": "06:34",
-            "last": "23:41",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-          },
-          "SZ060": {
-            "first": "06:19",
-            "last": "23:58",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "06:17",
-            "last": "00:03",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:26",
-            "last": "23:06",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
       "SZ055": {
         "SZ28": {
           "SZ031": {
@@ -5838,27 +6258,6 @@
           }
         }
       },
-      "SZ009": {
-        "SZ3": {
-          "SZ099": {
-            "first": "06:25",
-            "last": "00:06",
-            "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "06:07",
-            "last": "23:52",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:36",
-            "last": "23:16",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
       "SZ075": {
         "SZ3": {
           "SZ099": {
@@ -5901,27 +6300,6 @@
             "first": "06:04",
             "last": "00:19",
             "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-          }
-        }
-      },
-      "SZ003": {
-        "SZ3": {
-          "SZ099": {
-            "first": "06:07",
-            "last": "00:21",
-            "source": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "06:20",
-            "last": "00:05",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:24",
-            "last": "23:04",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
           }
         }
       },
@@ -6105,32 +6483,6 @@
           }
         }
       },
-      "SZ011": {
-        "SZ11": {
-          "SZ050": {
-            "first": "06:37",
-            "last": "00:34",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-          },
-          "SZ258": {
-            "first": "06:33",
-            "last": "23:33",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "06:02",
-            "last": "23:47",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:41",
-            "last": "23:21",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
       "SZ213": {
         "SZ11": {
           "SZ050": {
@@ -6156,32 +6508,6 @@
             "first": "06:46",
             "last": "23:46",
             "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-          }
-        }
-      },
-      "SZ022": {
-        "SZ11": {
-          "SZ050": {
-            "first": "06:18",
-            "last": "00:15",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-          },
-          "SZ258": {
-            "first": "06:28",
-            "last": "23:51",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html"
-          }
-        },
-        "SZ1": {
-          "SZ001": {
-            "first": "05:45",
-            "last": "23:22",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:12",
-            "last": "23:46",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
           }
         }
       },
@@ -6403,332 +6729,6 @@
             "first": "07:00",
             "last": "22:00",
             "source": "https://www.szmc.net/szmc_en/Time_Table/Line20/202112/95479.html"
-          }
-        }
-      },
-      "SZ001": {
-        "SZ1": {
-          "SZ030": {
-            "first": "06:30",
-            "last": "23:00",
-            "source": "https://www.szmc.net/styles/index/zdWeb/luohu.html"
-          }
-        }
-      },
-      "SZ002": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:21",
-            "last": "00:06",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:22",
-            "last": "23:02",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ005": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:15",
-            "last": "00:00",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:28",
-            "last": "23:08",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ006": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:13",
-            "last": "23:58",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:30",
-            "last": "23:10",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ007": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:10",
-            "last": "23:55",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:33",
-            "last": "23:13",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ008": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:09",
-            "last": "23:54",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:35",
-            "last": "23:15",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ010": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:04",
-            "last": "23:49",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:39",
-            "last": "23:19",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ012": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:00",
-            "last": "23:45",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "05:49",
-            "last": "23:23",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ013": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:05",
-            "last": "23:42",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "05:52",
-            "last": "23:26",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ014": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:03",
-            "last": "23:40",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "05:54",
-            "last": "23:28",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ016": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:59",
-            "last": "23:36",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "05:58",
-            "last": "23:32",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ017": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:57",
-            "last": "23:34",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:00",
-            "last": "23:34",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ018": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:55",
-            "last": "23:32",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:02",
-            "last": "23:36",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ019": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:51",
-            "last": "23:28",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:06",
-            "last": "23:40",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ020": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:49",
-            "last": "23:26",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:08",
-            "last": "23:42",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ021": {
-        "SZ1": {
-          "SZ001": {
-            "first": "05:47",
-            "last": "23:24",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:10",
-            "last": "23:44",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ023": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:32",
-            "last": "23:19",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:01",
-            "last": "23:49",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ024": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:31",
-            "last": "23:17",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:03",
-            "last": "23:51",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ025": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:29",
-            "last": "23:15",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:05",
-            "last": "23:53",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ026": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:26",
-            "last": "23:13",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:07",
-            "last": "23:55",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ027": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:24",
-            "last": "23:11",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:09",
-            "last": "23:57",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ028": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:28",
-            "last": "23:07",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:13",
-            "last": "00:01",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ029": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:24",
-            "last": "23:03",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          },
-          "SZ030": {
-            "first": "06:18",
-            "last": "00:06",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
-          }
-        }
-      },
-      "SZ030": {
-        "SZ1": {
-          "SZ001": {
-            "first": "06:21",
-            "last": "23:00",
-            "source": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html"
           }
         }
       }
@@ -8853,5 +8853,5 @@
     }
   },
   "selectedServiceDayType": "workday",
-  "serviceHoursUpdatedAt": "2026-08-10T16:05:57.171072+08:00"
+  "serviceHoursUpdatedAt": "2026-08-10T21:46:06.830064+08:00"
 }

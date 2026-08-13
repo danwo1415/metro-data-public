@@ -1,6 +1,91 @@
 {
   "sources": [
     {
+      "line": "SZ1",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html",
+      "records": 58
+    },
+    {
+      "line": "SZ1",
+      "schedule": "dayoff",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
+      "records": 58
+    },
+    {
+      "line": "SZ1",
+      "schedule": "holiday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79724.html",
+      "records": 58
+    },
+    {
+      "line": "SZ28",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html",
+      "records": 62
+    },
+    {
+      "line": "SZ28",
+      "schedule": "dayoff",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75554.html",
+      "records": 62
+    },
+    {
+      "line": "SZ28",
+      "schedule": "holiday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75552.html",
+      "records": 56
+    },
+    {
+      "line": "SZ3",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html",
+      "records": 60,
+      "fallback": "direct-official-page"
+    },
+    {
+      "line": "SZ11",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75600.html",
+      "records": 34
+    },
+    {
+      "line": "SZ11",
+      "schedule": "dayoff",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html",
+      "records": 34
+    },
+    {
+      "line": "SZ11",
+      "schedule": "holiday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75596.html",
+      "records": 34
+    },
+    {
+      "line": "SZ12",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line12/",
+      "records": 0
+    },
+    {
+      "line": "SZ14",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line14/",
+      "records": 0
+    },
+    {
+      "line": "SZ16",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line16/",
+      "records": 0
+    },
+    {
+      "line": "SZ20",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/Line20/202112/95479.html",
+      "records": 8
+    },
+    {
       "line": "SZ13",
       "schedule": "workday",
       "url": "https://www.mtrsz.com.cn/frontend/default/src/channel/operation_timetable_13line.html",
@@ -15,94 +100,43 @@
   ],
   "errors": [
     {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line2/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line8/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html",
-      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line8/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line3/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line3/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html",
-      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line3/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line3/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line4/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line4/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line4/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line4/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line5/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line5/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line5/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line5/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line6/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line6/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line6z/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6z/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6z/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line6z/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line7/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line7/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line7/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line7/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line9/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line9/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line9/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line9/"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line10/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line10/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line12/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line12/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line14/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line14/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line16/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line16/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/Line20/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line20/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/map/",
-      "error": "GET failed: https://www.szmc.net/map/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line10/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line10/"
     }
   ],
   "unresolvedLines": [
-    "SZ1",
-    "SZ28",
-    "SZ3",
     "SZ4",
     "SZ5",
     "SZ6",
@@ -110,17 +144,15 @@
     "SZ7",
     "SZ9",
     "SZ10",
-    "SZ11",
     "SZ12",
     "SZ14",
     "SZ16",
-    "SZ20",
     "SZ13"
   ],
   "lineCounts": {
-    "SZ1": 0,
-    "SZ28": 0,
-    "SZ3": 0,
+    "SZ1": 174,
+    "SZ28": 180,
+    "SZ3": 60,
     "SZ4": 0,
     "SZ5": 0,
     "SZ6": 0,
@@ -128,14 +160,14 @@
     "SZ7": 0,
     "SZ9": 0,
     "SZ10": 0,
-    "SZ11": 0,
+    "SZ11": 102,
     "SZ12": 0,
     "SZ14": 0,
     "SZ16": 0,
-    "SZ20": 0,
+    "SZ20": 8,
     "SZ13": 0
   },
-  "generatedAt": "2026-08-13T03:28:05.557084+08:00",
+  "generatedAt": "2026-08-13T10:49:03.350328+08:00",
   "selectedDayType": "workday",
   "selectedDirectRecords": 193,
   "selectedStations": 106,
@@ -146,6 +178,6 @@
     "dayoff": 0,
     "holiday": 0
   },
-  "stationPagesChecked": 351,
+  "stationPagesChecked": 266,
   "stationPageRecords": 0
 }

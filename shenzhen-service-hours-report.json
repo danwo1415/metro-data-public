@@ -3,9 +3,20 @@
     {
       "line": "SZ28",
       "schedule": "workday",
-      "url": "https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html",
-      "records": 62,
-      "fallback": "direct-official-page"
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html",
+      "records": 62
+    },
+    {
+      "line": "SZ28",
+      "schedule": "dayoff",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75554.html",
+      "records": 62
+    },
+    {
+      "line": "SZ28",
+      "schedule": "holiday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75552.html",
+      "records": 56
     },
     {
       "line": "SZ3",
@@ -79,10 +90,6 @@
       "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line2/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line2/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line8/",
       "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line8/"
     },
@@ -135,7 +142,7 @@
   ],
   "lineCounts": {
     "SZ1": 0,
-    "SZ28": 62,
+    "SZ28": 180,
     "SZ3": 60,
     "SZ4": 0,
     "SZ5": 0,
@@ -151,7 +158,7 @@
     "SZ20": 8,
     "SZ13": 0
   },
-  "generatedAt": "2026-08-17T15:17:46.981926+08:00",
+  "generatedAt": "2026-08-17T21:07:44.273844+08:00",
   "selectedDayType": "workday",
   "selectedDirectRecords": 193,
   "selectedStations": 106,

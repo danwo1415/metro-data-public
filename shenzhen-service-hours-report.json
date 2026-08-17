@@ -1,6 +1,24 @@
 {
   "sources": [
     {
+      "line": "SZ1",
+      "schedule": "workday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79728.html",
+      "records": 58
+    },
+    {
+      "line": "SZ1",
+      "schedule": "dayoff",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
+      "records": 58
+    },
+    {
+      "line": "SZ1",
+      "schedule": "holiday",
+      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79724.html",
+      "records": 58
+    },
+    {
       "line": "SZ28",
       "schedule": "workday",
       "url": "https://www.szmc.net/szmc_en/Time_Table/line2/202003/75556.html",
@@ -82,14 +100,6 @@
   ],
   "errors": [
     {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line8/",
       "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: 404 Client Error: Not Found for url: https://www.szmc.net/szmc_en/Time_Table/line8/"
     },
@@ -127,7 +137,6 @@
     }
   ],
   "unresolvedLines": [
-    "SZ1",
     "SZ4",
     "SZ5",
     "SZ6",
@@ -141,7 +150,7 @@
     "SZ13"
   ],
   "lineCounts": {
-    "SZ1": 0,
+    "SZ1": 174,
     "SZ28": 180,
     "SZ3": 60,
     "SZ4": 0,
@@ -158,7 +167,7 @@
     "SZ20": 8,
     "SZ13": 0
   },
-  "generatedAt": "2026-08-17T21:07:44.273844+08:00",
+  "generatedAt": "2026-08-18T02:58:56.645623+08:00",
   "selectedDayType": "workday",
   "selectedDirectRecords": 193,
   "selectedStations": 106,
@@ -169,6 +178,6 @@
     "dayoff": 0,
     "holiday": 0
   },
-  "stationPagesChecked": 286,
-  "stationPageRecords": 6
+  "stationPagesChecked": 266,
+  "stationPageRecords": 0
 }

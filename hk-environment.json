@@ -1,9 +1,9 @@
 {
-  "pm25": 6,
+  "pm25": 6.4,
   "unit": "µg/m³",
   "station": "Central/Western",
-  "sourceUpdatedAt": "Wed, 19 Aug 2026 19:00:00 +0800",
-  "publishedAt": "2026-08-19T11:54:03+00:00",
+  "sourceUpdatedAt": "Wed, 19 Aug 2026 20:00:00 +0800",
+  "publishedAt": "2026-08-19T13:26:51+00:00",
   "source": "Hong Kong Environmental Protection Department",
   "sourceUrl": "https://www.aqhi.gov.hk/epd/ddata/html/out/24pc_Eng.xml"
 }

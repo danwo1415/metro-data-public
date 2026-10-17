@@ -1,12 +1,12 @@
 {
   "stations": 18,
-  "validPm25Records": 416,
+  "validPm25Records": 414,
   "selected": {
-    "pm25": 14,
+    "pm25": 11.6,
     "unit": "µg/m³",
     "station": "Central/Western",
-    "sourceUpdatedAt": "Sat, 17 Oct 2026 13:00:00 +0800",
-    "publishedAt": "2026-10-17T06:04:02+00:00",
+    "sourceUpdatedAt": "Sat, 17 Oct 2026 18:00:00 +0800",
+    "publishedAt": "2026-10-17T11:06:50+00:00",
     "source": "Hong Kong Environmental Protection Department",
     "sourceUrl": "https://www.aqhi.gov.hk/epd/ddata/html/out/24pc_Eng.xml"
   }

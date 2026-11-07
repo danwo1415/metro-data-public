@@ -16,87 +16,87 @@
   "errors": [
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line1/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line1/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaacb7b140>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line1/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8662eab0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line1/202004/79726.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66150>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line1/202004/79726.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line1/202004/79726.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580dd90>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line2/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line2/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line2/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca65f70>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line2/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line2/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580da30>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line8/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line8/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66510>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line8/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line8/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580e150>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html",
-      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_enm/Time_Table/Line2/202003/85128.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66870>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line2/202003/85128.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_enm/Time_Table/Line2/202003/85128.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580e4b0>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line3/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line3/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line3/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66bd0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line3/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line3/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580e810>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html",
-      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_enm/Time_Table/Line3/202003/85129.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66f30>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_enm/Time_Table/Line3/202003/85129.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_enm/Time_Table/Line3/202003/85129.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580eb70>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line4/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line4/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line4/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca67440>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line4/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line4/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580f080>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line5/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line5/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line5/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca67890>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line5/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line5/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580f4d0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line6/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line6/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca672c0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line6/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580f2c0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line6z/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6z/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line6z/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca67260>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line6z/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line6z/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580ef90>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line7/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line7/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line7/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66ea0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line7/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line7/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580ecc0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line9/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line9/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line9/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca66540>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line9/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line9/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580e510>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/line10/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line10/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line10/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca663f0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/line10/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/line10/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580e1e0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line11/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca65fa0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line11/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580db50>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line11/202003/75598.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca67ce0>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line11/202003/75598.html: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line11/202003/75598.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580f920>, 'Connection to www.szmc.net timed out. (connect timeout=12)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line12/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line12/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line12/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaac354110>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line12/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line12/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580fd40>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line14/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line14/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaac354560>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line14/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e851501a0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line16/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line16/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line16/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaac354a40>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line16/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line16/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e85150680>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/szmc_en/Time_Table/Line20/",
-      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line20/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line20/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaaca67fb0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/szmc_en/Time_Table/Line20/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /szmc_en/Time_Table/Line20/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e8580f980>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     },
     {
       "url": "https://www.szmc.net/map/",
-      "error": "GET failed: https://www.szmc.net/map/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /map/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x7eeaac354cb0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
+      "error": "GET failed: https://www.szmc.net/map/: HTTPSConnectionPool(host='www.szmc.net', port=443): Max retries exceeded with url: /map/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.szmc.net', port=443) at 0x782e85150bf0>, 'Connection to www.szmc.net timed out. (connect timeout=10)'))"
     }
   ],
   "unresolvedLines": [
@@ -135,7 +135,7 @@
     "SZ20": 0,
     "SZ13": 0
   },
-  "generatedAt": "2026-11-07T21:26:46.173955+08:00",
+  "generatedAt": "2026-11-08T06:13:50.322642+08:00",
   "selectedDayType": "dayoff",
   "selectedDirectRecords": 154,
   "selectedStations": 106,

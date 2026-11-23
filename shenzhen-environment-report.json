@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T08:51:20+00:00",
+  "generatedAt": "2026-11-23T21:08:47+00:00",
   "officialDatasets": {
     "weather": "29200_00903509",
     "pm25": [
@@ -17,8 +17,7 @@
   "datasetAttempts": [
     {
       "dataset": "29200_01000344",
-      "status": "failed",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "status": "ok"
     },
     {
       "dataset": "29200_00900269",
